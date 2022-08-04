@@ -1,0 +1,576 @@
+* {
+    /* Universal Selector */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*********************Header Style starts******************/
+.header {
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+/*********************LOGO PART CSS STARTS******************/
+.logo {
+    height: 100px;
+}
+
+/*********************LOGO PART END************************/
+/*********************WORKFLOW PART CSS********************/
+.workflow {
+    margin-left: 20px;
+}
+
+.workflow-text,
+.workflow-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 900px;
+    height: 35px;
+    text-align: center;
+}
+
+.dottedline {
+    content: "";
+    width: 800px;
+    margin-left: 55px;
+    border-bottom: 1px dashed black;
+    position: relative;
+    top: -18px;
+    z-index: -1;
+}
+
+.workflow-text {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/*************************************NavBar Starts****************************/
+.navbar {
+    background-color: #264A90;
+    color: white;
+    height: 35px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.navbar-content {
+    margin-left: 150px;
+}
+
+.navbar-content span {
+    color: white;
+    margin-right: 5px;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.navbar-content a {
+    color: white;
+    text-decoration: none;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    border-right: 1px solid black;
+}
+
+/* .navbar-content a:first-child {
+    border-left: 1px solid black;
+} */
+.navbar-content-home {
+    background-color: #1c3058;
+}
+
+.navbar-content-Helpdesk {
+    margin-left: 10px;
+    /* border-left: 1px solid black; */
+}
+
+/************************NAVBAR ENDS*************************/
+/************************TABLE STARTS************************/
+.body {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left: 10%;
+    overflow: hidden;
+    
+}
+
+.total-table {
+    width: 100%;
+}
+
+.notification {
+    border: 1px solid black;
+    background-color: #3C7ECC;
+    width: 25%;
+    font-size: 12px;
+}
+
+.notification-left {
+    display: flex;
+    color: white;
+    gap: 10px;
+    margin-top: 7px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.notification-left-p2 {
+    width: 20px;
+    margin-left: 30px;
+    height: 22px;
+    background-color: rgb(30, 30, 92);
+    padding-left: 8px;
+}
+
+table {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tablecontent {
+    /* max-height: 590px; */
+    border: 1px solid black;
+    /* overflow-y: scroll; */
+}
+.container {
+    width: 100%;
+}
+td {
+    padding: 8px;
+    height: 50%;
+}
+a {
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(15, 15, 182);
+    text-align: right;
+    font-weight: bold;
+}
+tr:nth-child(odd) {
+    background-color:#F1F9FF;
+}
+th {
+    background-color:#6A9ED8;
+    font-size: 13px;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    position: sticky;
+    top: 0;
+    width:10px;
+}
+/*******************************BOTTOM NAVBAR STARTS*****************************/
+.bottom-navbar {
+    width: 100%;
+    height: 39px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid navy;
+    font-size: 13px;
+    position:sticky;
+    bottom:30px;
+    
+}
+
+.newsupdate {
+    background-color: #DE4655;
+    color: white;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.calendar {
+    background-color: #EBB222;
+    color: white;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.templates {
+    display: grid;
+    grid-template-columns: auto auto;
+    color: white;
+    background-color: #47BA76;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.templates-right {
+    text-align: right;
+    margin-right: 5px;
+}
+
+/**********************************TABLE ENDS***********************************/
+/**********************************FILTER PART CSS******************************/
+.filtersection {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    border: 1px solid rgb(196, 186, 186);
+    font-size: 13px;
+}
+
+.click_dashboard {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #8BA2D6;
+    color: white;
+    font-weight: 700;
+    height: 45PX;
+    justify-content: space-between;
+}
+
+.click_dashboard p {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    height: 20px;
+    padding-top: 0px;
+}
+
+.fil {
+    margin-top: -8px;
+    margin-left: 12px;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.second p {
+    margin-left: 8px;
+}
+
+.filter_icon_name {
+    margin-left: 5px;
+}
+
+.second-right {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: -8px;
+    font-weight: 500;
+}
+
+.second-right-1 {
+    margin-right: 5px;
+}
+
+.second-right-2 select {
+    margin-right: 800px;
+}
+
+.right_directories {
+    width: 150px;
+}
+
+.third {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.sca_number {
+    margin-left: 17px;
+    margin-top: 2px;
+}
+
+.sca-dropdowns {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.sca_directories {
+    width: 80px;
+    height: 30px;
+}
+
+.fil-drops {
+    width: 60px;
+    height: 30px;
+}
+
+.Scarb_Review,
+.Contract_term {
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.Scarb_Review p,
+.Scarb_Review select,
+.Contract_term p,
+.Contract_term select {
+    width: 315px;
+    margin-left: 8px;
+    height: 30px;
+}
+
+.contract_all {
+    width: 340px;
+    height: 35px;
+}
+
+/************************TOTAL COST************************/
+.amount-stages {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+}
+
+.totalamount {
+    background-color: rgb(101, 76, 124);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    width: 320px;
+    margin-left: 13px;
+}
+
+/***********************CHEVRON IMAGE**********************/
+.chevron {
+    font-size: 12px;
+    width: 350px;
+    font-weight: 700;
+    color: white;
+    margin-top: 10px;
+    padding-left: 25px;
+    position: relative;
+    margin-bottom:20px;
+}
+
+.tot_num {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    bottom: 160px;
+    left: 44%
+}
+
+.tot_name {
+    color: black;
+    font-size: 22px;
+    position: absolute;
+    bottom: 130px;
+    left: 40%;
+}
+
+.board-number1 {
+    position: absolute;
+    left: 46%;
+    bottom: 265px;
+    z-index: 9999;
+}
+
+.board1 {
+    position: absolute;
+    left: 42%;
+    bottom: 240px;
+    z-index: 9999;
+}
+
+.board-number2 {
+    position: absolute;
+    left: 68%;
+    bottom: 250px;
+    z-index: 9999;
+}
+
+.board2 {
+    position: absolute;
+    left: 64%;
+    bottom: 215px;
+    z-index: 9999;
+}
+
+.board-number3 {
+    position: absolute;
+    left: 76%;
+    bottom: 160px;
+    z-index: 9999;
+}
+
+.board3 {
+    position: absolute;
+    left: 74%;
+    bottom: 140px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.board-number4 {
+    position: absolute;
+    left: 72%;
+    bottom: 90px;
+    z-index: 9999;
+}
+
+.board4 {
+    position: absolute;
+    left: 63%;
+    bottom: 56px;
+    z-index: 9999;
+    text-align: center;
+}
+
+.board-number5 {
+    position: absolute;
+    left: 48%;
+    bottom: 68px;
+    z-index: 9999;
+}
+
+.board5 {
+    position: absolute;
+    left: 45%;
+    bottom: 15px;
+    z-index: 9999;
+}
+
+.board-number6 {
+    position: absolute;
+    left: 26%;
+    bottom: 85px;
+    z-index: 9999;
+}
+
+.board6 {
+    position: absolute;
+    left: 22%;
+    bottom: 35px;
+    z-index: 9999;
+}
+
+.board-number7 {
+    position: absolute;
+    left: 16%;
+    bottom: 165px;
+    z-index: 9999;
+}
+
+.board7 {
+    position: absolute;
+    left: 12%;
+    bottom: 130px;
+    z-index: 9999;
+}
+
+.board-number8 {
+    position: absolute;
+    left: 20%;
+    bottom: 240px;
+    z-index: 9999;
+}
+
+.board8 {
+    position: absolute;
+    left: 15%;
+    bottom: 210px;
+    z-index: 9999;
+}
+
+/******************FOOTER STARTS*******************/
+footer {
+     margin-top: 10px;
+     position: sticky;
+    bottom: 0px;
+    background-color: #F1F9FF;
+}
+
+.footer-text {
+    margin-left: 140px;
+    font-size: 13px;
+    color: rgb(60, 91, 193);
+    font-weight: bold;
+}
+
+.footer-text a {
+    text-decoration: underline;
+}
+
+.footer-title {
+    width: 80%;
+    color: navy;
+    text-align: right;
+    margin-top: -20px;
+    margin-right: 50px;
+}
+
+/************************FOOTER CLOSE************************/
+/************************MEDIA QUERIES************************/
+@media screen and (max-width: 1024px) {
+
+    .header,
+    .body {
+        display: inline-block;
+        /* width: 80%; 
+        */
+    }
+
+    .dottedline {
+        width: 350px;
+        margin-left: 10px;
+    }
+
+    .workflow-text,
+    .workflow-icons {
+        width: 400px;
+        font-size: 8px;
+    }
+    .notification{
+        font-size: 8px;
+    }
+    .filtersection{
+        width:350px;
+        height:700px;
+    }
+    .filter{
+        margin-top: 10px;
+       
+    }
+    /* .second-right{
+        margin-top: -5px;
+    } */
+
+
+    .Scarb_Review{
+        margin-top: 25px;
+
+    }
+    .Contract_term {
+    margin-top: 20px;
+}
+.sca_number{
+    margin-top: 30px;
+
+}
+.medcomhome,
+.create_icon,
+.scrabcal_icon,
+.report_icon,
+.help_icon{
+    display: none;
+}
+.footer-text,
+.footer-title{
+    font-size: 7px;
+    margin-bottom: 10px;
+}
+}
