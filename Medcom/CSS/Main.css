@@ -1,0 +1,425 @@
+/*===== UNIVERSAL SELECTOR IS USED HERE =====*/
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+ /*===== HEADER = LOGO + WORK FLOW =====*/
+.header{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo img{
+    height: 120px;
+}
+
+/*===== WORKFLOW PART CSS =====*/
+.workflow{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.workflow-text,
+.workflow-icons{      
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 96%;
+    height: 35px;
+    text-align: center;
+}
+
+/*===== DOTTED LINE TO CONNECT WORK FLOW ICONS =====*/
+.line{
+    content: "";
+    width:84%;
+    margin-left: 7%;
+    border-bottom: 1px dashed black;
+    position: relative;
+    top: -19px;
+    z-index: -1;
+}
+
+.workflow-text{
+    font-size: 0.68rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+.navbar{
+    background-color: #264990;
+    color:white;
+    height: 34px;
+    width: 100% ;
+    margin-top: 10px;
+    outline: none;
+}
+
+.navbar-content{
+    margin-left: 10%;
+    font-size: 13px;    
+}
+
+.navbar-content span{   
+    color:white;
+    margin-right: 5px;
+    font-size: 0.81rem;
+    padding: 12px;   
+}
+
+.navbar-content a{
+    color:white;
+    text-decoration: none;
+    padding: 5px;
+   
+}
+.navbar-content-home,
+.navbar-content-create,
+.navbar-content-scarb,
+.navbar-content-reports,
+.navbar-content-helpdesk,
+.navbar-content-settings{
+border: 1px solid black;
+}
+
+.notification{
+    padding: 2px;
+    background-color: #3C7ECC;
+    height: 35px;
+    width: 200px;   
+}
+
+.notification-right span{
+    color:white;
+    margin-right: 15px;
+    
+}
+
+.notification-left{
+    display: grid;
+    grid-template-columns: auto auto;
+    color: white;
+    gap: 10px;
+    margin-top: 7px;
+}
+
+.notification-left-p1{
+    font-size: 0.81rem;
+    font-weight: 500;
+}
+
+.notification-left-p2{
+    width: 20px;
+    height: 16px;
+    background-color: rgb(30, 30, 92);
+    text-align: center;   
+    border-radius: 2px;
+    padding-bottom: 20px;   
+}
+
+table{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:100%;
+    
+}
+
+td,th{
+    font-size: 0.81rem;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color:#F1F9FF;
+}
+
+.table-content{
+    border: 2px solid rgb(170, 170, 170); 
+    width: 100%;
+  } 
+
+#tableData{
+    border-collapse: collapse;
+} 
+
+  th{
+    position: sticky;
+    top: 0px;
+    background-color: #6A9ED8;
+    color: white;
+    text-align: left;
+    /* width: 15%; */
+  }
+
+  /*===== TABLE DATA FROM JAVA SCRIPT =====*/
+  /*===== PROJECT NAME =====*/
+  a{
+    color:blue;
+    text-decoration: none;
+  }
+
+.notification-p{
+    color:white;
+    margin-top: 6px;
+}
+.notification-left{
+    margin-left: 10px;
+}
+
+.bottom-navbar{   
+    width: 100%;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 7px;
+    font-size: 0.81rem; 
+    font-weight: 600;  
+    position: sticky;
+    bottom: 25px; 
+}
+
+.newsupdate,
+.calendar,
+.templates{
+    padding-left: 10px;
+    padding-top: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.81rem;
+    color: white;
+}
+
+.newsupdate{
+    background-color: #DE4555;  
+}
+
+.calendar{
+    background-color: #EA8220;  
+}
+
+.templates{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #47BA75;   
+}
+
+.templates-right{
+    text-align: right;
+    margin-right: 5px;
+}
+
+/*===== BODY = NAVBAR + TABLE DATA + BOTTOM NAV BAR + FILTER =====*/
+.body{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left:10%;
+    /* overflow: none; */
+}
+
+
+/*===== FILTER PART CSS =====*/
+.filteration{
+    width: 100%;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid rgb(196, 186, 186);    
+}
+
+.dashboard{
+    background-color: #8BA2D6;
+    color: white;
+    height: 50px;
+    padding: 12px;  
+}
+
+.filter-part{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 30px; 
+    border-bottom: 1px solid black;
+}
+
+.filter-icon{
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 80px;
+}
+
+.filter-icon span{
+    margin-top: 5px;
+}
+
+.directorates{
+    margin-left: 50px;
+}
+
+#dir{
+    width: 100px;
+    height: 25px;
+}
+
+.directorates-list{
+    width: 150px;   
+}
+
+.sca-number{
+    width: 280px;
+    margin:auto
+}
+
+#Primary_Staff_list,
+#directorates2_list,
+#fiscalYear{
+    width: 68px;
+    height: 25px;
+}
+
+#myInput{
+    width: 68px;
+    height: 25px;
+}
+
+.dir{
+    width: 150px;
+    height: 25px;
+}
+
+.sca-number-dropdowns{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;    
+}
+
+.scarb-review,
+.contract-term{
+    margin:auto;
+}
+
+.scarb-review p,
+.scarb-review select,
+.contract-term p,
+.contract-term select{
+    width: 280px; 
+    height: 30px ;   
+}
+
+.total-cost{
+    background-color: #726086;
+    color:white;
+    text-align:center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    width: 290px;
+    margin:auto;   
+}
+
+.chevron{
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+footer{
+    position: sticky;
+    bottom: 0;
+    background-color:white;
+}
+
+.footer-title{
+    color:navy;
+    text-align: center;
+}
+
+
+/*===== MEDIA QUERRIES UPTO 1024PX =====*/
+@media screen and (max-width:1024px) {
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr;
+    width:80%;
+    margin-left: 10%;
+}
+
+.line{
+    width:84%;   
+    margin-left: 8%;
+}
+
+.bottom-navbar{   
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 0.81rem;    
+    position: sticky;
+    bottom: 25px;
+}
+
+.newsupdate,
+.calendar,
+.templates{   
+   border: 1px solid navy;
+}
+       
+.workflow-text,
+.workflow-icons{
+    width: 100%;
+    font-size: 0.7rem;
+}
+
+.navbar-content{
+    margin-left: 10%;
+    font-size: 10px
+}
+
+.body{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left:10%;
+}
+
+.filteration{
+    width: 300px;
+    margin-top: 20px;
+}
+
+.navbar{
+    background-color: #264990;
+    height: 30px;
+    width: 100% ;
+    margin-top: 10px;
+}
+
+.navbar-content span{   
+    color:white;
+    margin-right: 5px;
+    font-size: 0.72rem;
+    margin-top: -3px;   
+}
+
+span.fa-caret-down,
+.medcom,
+.create,
+.scarbMonthlyReview,
+.reports,
+.helpDesk{
+    display: none;
+}
+
+}
