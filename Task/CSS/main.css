@@ -109,15 +109,15 @@
     margin-top: 2%;
 }
 
-.flow1-text,
-.flow2-text{
+.top-workflow-text,
+.bottom-workflow-text{
     font-size: 13px;
     font-weight: 500;
 
 }
 
-.top-workflow-text,
-.workflow2{
+.bottom-workflow,
+.bottom-workflow{
     margin-top: 20px;
 }
 
