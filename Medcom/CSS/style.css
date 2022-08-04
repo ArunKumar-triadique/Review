@@ -1,0 +1,342 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* font-size: 13px;  */
+}
+.medcom_total_project {
+  overflow: hidden;
+  /* width: 80%; */
+}
+/* Header part and contract procees part styles start */
+.header_part {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+}
+.Army_logo_img{
+/* height: 100px; */
+margin-top: 20px;
+}
+.workflow_text{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.workflow{
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+.workflow_text,
+.workflow_icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 96%;
+  height: 35px;
+  text-align: center;
+  font-size: 12px;
+}
+.line {
+  content: "";
+  width: 84%;
+  margin-left: 63px;
+  border-bottom: 1px dashed black;
+  position: relative;
+  top: -18px;
+  z-index: -1;
+}
+/* Header part and contract procees part styles close */
+/* ^^^^^^^^^^^^^^^^^^Top Navabar Styles starts Here^^^^^^^^^^^^^^^^^ */
+.Top_navbar {
+    background-color: #264A90;
+  color: white;
+  height: 35px;
+  width: 100%;
+  margin-top: 10px;
+}
+.navbar-content{
+  margin-left: 10%;
+}
+.navbar-content span {
+  color: white;
+  margin-right: 5px;
+  font-size: 13px;
+  padding: 13px;
+}
+.navbar-content a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;  
+}
+.navbar-content-home {
+  border: 1px solid black;
+  background-color: #1c3058;
+}
+.navbar-content-create {
+  border: 1px solid black; 
+}
+.navbar_content_Helpdesk {
+  border: 1px solid black;
+  margin-left:50%;
+}
+/* ^^^^^^^^^^^^^Top Navbar Styles close ^^^^^^^*/
+/* &&&&&&&&&&&&& Notification Bar Styles Starts &&&&&&&&&&&&& */
+.notification_bar {
+  border: 1px solid black;
+  background-color:#3C7ECC;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* margin-top: 20px; */
+  width: 30%;
+}
+.notification-right span {
+  color: white;
+  margin-right: 15px;
+}
+.notification_left{
+  display: flex;
+  color: white;
+  gap: 10px;
+}
+.notification-right {
+  text-align: right;
+}
+.notification_left_p1 {
+  font-size: 14px;
+  font-weight: 500;
+  width: 200px;
+  height: 40px;
+}
+.notification_left_p2 {
+  width: 20px;
+  height: 16px;
+  margin-top: 5px;
+  background-color:#175295;
+  text-align: center;
+  border-radius: 2px;
+  padding-bottom: 20px;
+}
+/* &&&&&&&&&&&&&&&&& Notification Bar Styles Close &&&&&&&&&&&&& */
+/* *************** Table Styles starts Here ****************  */
+.table {
+  width: 100%;
+  border: 1px solid rgb(95, 95, 95);
+  /* border-collapse: collapse;  */
+}
+.container {
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  padding: 8px;
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color:#F1F9FF;
+}
+.tablecontent {
+  /* max-height: 700px;
+  overflow-y: scroll; */
+  border: 1px solid;
+  /* width: 100%; */
+}
+th {
+  position: sticky;
+  top: 0;
+  background-color: #6F96cB;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: blue;
+  text-align: right;
+  font-weight: 500;
+  font-size: 13px;
+}
+.bottom-navbar {
+  width: 100%;
+  height: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 7px;
+  border: 2px solid navy;
+}
+.newsupdate {
+  background-color:#DE4555;
+  color: white;
+  padding-left: 10px;
+  padding-top: 4px;
+}
+.calendar {
+  background-color:#EA8220;
+  color: white;
+  padding-left: 10px;
+  padding-top: 4px;
+}
+.templates {
+  display: grid;
+  grid-template-columns: auto auto;
+  color: white;
+  background-color:#47BA75;
+  padding-left: 10px;
+  padding-top: 4px;
+}
+.templates-right {
+  text-align: right;
+  margin-right: 5px;
+}
+.body {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 10px;
+  margin: auto;
+  margin-top: 10px;
+}
+/* ************ Table Styles close ***************** */
+/* @@@@@@@@@@@@@ FILTER PART Styles Starts @@@@@@@@@@@@@@@@ */
+.filter_section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  border: 1px solid rgb(196, 186, 186);
+  height: 700PX;
+}
+.filter_Dashboard {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #8BA2D6;
+  color: white;
+  height: 37px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.first-dashboard_left p {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.first-right select {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.filter_fltr {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(65, 65, 65);
+  height: 34px;
+  padding-top: 5px;
+}
+/* .second p {
+  margin-left: 8px;
+} */
+.fltr_left p {
+  margin-left: 5px;
+}
+.fltr_right_Dir {
+  display: flex;
+  justify-content: space-between;
+  width: 115px;
+}
+.fltr_Dir_option select {
+  margin-right: 8px;
+}
+.amount-stages {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+}
+.filter_Sca_num {
+  margin-left: 8px;
+}
+.fil-drops{
+  width: 80px;
+  height: 30px;
+}
+.fourth-dropdowns {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.filter_scrb_review {
+  margin-left: 8px;
+}
+.filter_scrb_review p,
+.filter_scrb_review select,
+.seven p,
+.seven select {
+  width: 320px;
+}
+.filter_contract_term p,
+.filter_contract_term select,
+.seven p,
+.seven select {
+  width: 320px;
+  margin-left: 8px;
+}
+.Total_amount {
+  background-color:#726086;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  width: 320px;
+  margin-left: 8px;
+}
+.stages {
+  color: black;
+  text-align: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 5px;
+}
+.fi-title {
+  width: 350px;
+  height: 30px;
+}
+.chevron {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+footer {
+  margin-top: 10px;
+  position: sticky;
+  bottom: 0px;
+  background-color: white;
+}
+.footer-title {
+  color: navy;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .header_part,
+  .body {
+    display: inline-block;
+  }
+  .body{
+    width: 80%;
+    margin-left:10% ;
+  }
+  .line{
+    width: 84%;
+    float: left;
+  }
+.workflow_text,
+.workflow_icons{
+  width: 96%;
+  font-size: 8px;
+  float: left;
+}
+.medcom,
+.create,
+.helpdesk{
+  display: none;
+}
+}
+/* @@@@@@@@@@@@@ FILTER PART Styles Close @@@@@@@@@@@@@@@@  */
