@@ -1,0 +1,93 @@
+ .body {
+    font-size: 13px;
+    font-family: 'Segoe UI';
+}
+
+ #title_bar {
+    display: flex;
+ }
+
+ .bottom_navbar {
+    width: 66%;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 7px;
+}
+
+ .newsupdate {
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding: 5px;
+    display: block;
+    background-color: rgb(220, 29, 11);
+}
+
+ .calendar {
+    background-color: rgb(244, 135, 10);
+    color: white;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding: 5px;
+    width: 300px;
+ }
+
+ .templates {
+    display: grid;
+    grid-template-columns: auto auto;
+    color: white;
+    background-color: rgb(62, 149, 87);
+    padding-left: 10px;
+    padding-top: 4px;
+    padding: 3px;
+    width: 298px;
+ }
+
+ .button {
+    text-align: right;
+    margin-right: 5px;
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+ }
+
+ #content p {
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    width: 390px !important;
+ }
+
+ #description,
+ #news_data {
+    display: none;
+ }
+
+ .title_bar {
+    display: none;
+ }
+
+ #content,
+ #content1,
+ #content2 {
+    border: 1px solid black;
+ }
+
+ #description a {
+    text-decoration: none;
+    border-bottom: 1px dotted gray;
+    padding-left: 5px;
+ }
+
+ #content1 p {
+    text-align: center;
+ }
+
+ #get_details {
+    text-align: right;
+ }
+
+ #get_more {
+    text-align: right;
+ }
