@@ -1,0 +1,51 @@
+.main-section {
+    width: 100%;
+}
+
+.container {
+    margin: 0 6px 0 6px;
+    width: 30%;
+    background-color: aqua;
+    
+}
+
+.first {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    background-color: slateblue;
+}
+
+.second {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+}
+
+.right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.right p {
+    margin-right: 30px;
+}
+
+.third>input {
+    width: 98.5%;
+}
+
+.fi-title {
+    width: 100%;
+}
+
+.t-title {
+    margin: 0px;
+}
+
+.drop-down {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 100px;
+    column-gap: 5px;
+}
