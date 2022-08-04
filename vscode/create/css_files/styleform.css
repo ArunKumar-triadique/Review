@@ -1,0 +1,152 @@
+*{
+font-family: 'Segoe UI';
+font-size: 13px;
+}
+.main{
+    margin: auto;
+    width: 80%;
+    border:1px solid black;
+}
+.main_child{
+    padding: 5px;
+}
+button{
+    height: 80%;
+    
+}
+#buttons{
+    display: flex;
+    align-items: center;
+}
+.star{
+    color: red;
+}
+#statement{
+    display: flex;
+}
+#createform,#buttons{
+    display: none;
+
+}
+
+#field1,#field3,#field4,#field5,
+#field6,#field7,#field8,#field9,
+#field10,#field11,#field12,#field13
+#field14,#field15,#field16,#field17,#field18
+{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.options,.details{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap:0.5rem;
+    margin-right:40px;
+    margin-top: 10px;
+   
+}
+#field5_details{
+    display: none;
+    /* display: grid; */
+    /* grid-template-columns: auto auto; */
+}
+.head{
+    display: grid;
+    grid-template-columns: auto auto;
+    background: -webkit-linear-gradient( 0deg, rgb(153,153,51) 0%, rgb(15,126,183) 100%)
+}
+ol{
+    list-style: none;
+}
+#field14{
+    display: none;
+}
+
+.month{
+    height: 70%;
+}
+.year{
+    height: 70%;
+}
+.cor{
+    margin-left: 600px;
+    margin-top:20px ;
+    width:10%;
+}
+/* .main_box{
+    border-bottom: 1px solid black;
+} */
+#linehr{
+    display: none;
+}
+.form_div{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.content{
+    display: none;
+    border:1px solid black;
+    
+}
+.ecmra{
+    margin-left: 130px;
+    margin-top: 10px;
+    width:30%;
+}
+.sca{
+    margin-left: 250px;
+    margin-top: 10px;
+    width:20%;  
+}
+.corporate{
+    margin-left:50px;
+    margin-top: 10px;
+    width:45%;
+}
+.Budget{
+    margin-left:380px;
+    margin-top: 10px;
+    width:15%;
+}
+.contract{
+    margin-left: 500px;
+    margin-top:20px ;
+    width:12%;
+} 
+.contract_category{
+    margin-left: 660px;
+    margin-top:20px ;
+    width:10%;
+}
+/* .portfolio{
+    margin-left: 600px;
+    margin-top:20px ;
+   
+} */
+#field13_opt{
+    margin-left: 800px;
+    margin-top :-500px; ;
+    width:10%; 
+}
+/* .sourceless{
+    margin-left: 1000px;
+    margin-top:20px ;
+} */
+#field16_opt{
+    margin-left: 400px;
+    margin-top:10px ;
+    width:15%
+}
+.scaaction{
+    margin-left: 400px;
+    margin-top:10px ;
+    width:15%
+}
+.scasource{
+    margin-left: 400px;
+    margin-top:10px ;
+    width:15%
+}
+#field3content{
+    display: none;
+}

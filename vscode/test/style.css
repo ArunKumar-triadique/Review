@@ -1,0 +1,463 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-size: 13px; */
+}
+
+.maincontent {
+    overflow: hidden;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+
+
+/******************** LOGO PART CSS **********************/
+.Army_logo {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    /* width: 200px; */
+    margin-left: 80px;
+    margin-top: 30px;
+}
+.Army_logo-img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.logoname {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.Army_logo-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: -100px;
+}
+
+.Army_logo-subtitle {
+    font-size: 20px;
+    margin-left: -80px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+/**************workflow/contract process icons************* */
+.flow1-text,
+.flow1-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 950px;
+    height: 35px;
+    text-align: center;
+    font-size: 13px;
+    margin-right: 30px;
+}
+
+.line {
+    content: "";
+    width: 840px;
+    margin-left: 60px;
+    border-bottom: 1px dashed black;
+    position: relative;
+    top: -18px;
+    z-index: -1;
+}
+
+.flow1-text {
+    font-size: 13px;
+    font-weight: 500;
+
+}
+
+/* .flow1-icons{margin-bottom: -10px;} */
+
+.workflow1 {
+    margin-top: 50px;
+}
+
+/**************workflow/contract process icons ends************* */
+
+/* nav sty start */
+.navbar {
+    background-color: #264990;
+    color: white;
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    line-height: 40px;
+}
+.navbar-content span {
+    color: white;
+    margin-right: 5px;
+    font-size: 13px;
+    padding: 13px;
+}
+.navbar-content a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-right: 2px solid black;
+    font-weight: bold;
+
+}
+.navbar-content a:first-child {
+    border-left: 2px solid black;
+    background-color: darkblue;
+}
+
+.navbar-helpdesk {
+    margin-left: 30px;
+}
+
+.navbar-content {
+    margin-left: 45px;
+}
+
+.space {
+    margin-left: 220px;
+}
+
+/* nav sty end */
+
+/******************** table notification starts**********************/
+.table_body {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left: 3%;
+}
+
+.notification {
+    border: 1px solid black;
+    width:18%;
+}
+
+/* .notification-right span {
+    color: white;
+    margin-right: 15px;
+
+} */
+
+.notification-left {
+    display: grid;
+    grid-template-columns: auto auto;
+    color: white;
+    gap: 10px;
+    margin-top: 7px;
+}
+
+.notification-left-p1 {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.notification-left-p2 {
+    width: 20px;
+    height: 16px;
+    background-color: rgb(30, 30, 92);
+    text-align: center;
+    border-radius: 2px;
+    padding-bottom: 20px;
+}
+
+
+.notification {
+    background-color: rgb(43, 129, 234);
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 35px;
+    justify-content: space-between;
+}
+
+button {
+    background-color: rgb(105, 198, 86);
+    color: white;
+    font-size: 13px;
+    border: 1px solid rgb(86, 86, 86);
+    margin-top: 6px;
+    margin-right: 5px;
+    padding: 1px 8px 1px 8px;
+}
+
+.notification-p {
+    color: white;
+    margin-top: 6px;
+}
+
+.notification-left {
+    margin-left: 10px;
+}
+
+/********* table notification styles end ****************/
+
+/******************* table data starts************************** */
+.table_content {
+    max-height: 600px;
+    overflow-y: scroll;
+    border: 1px solid black;
+}
+
+table {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    font-size: 13px;
+    padding: 8px;
+}
+
+th {
+    color: white;
+    background-color: rgb(88, 18, 194);
+    position: sticky;
+    text-align: left;
+    top: 0;
+
+}
+
+.table_head {
+    position: sticky;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(149, 177, 219);
+}
+
+a {
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(15, 15, 182);
+}
+
+/******************* table data ends************************** */
+/************** newsupdate starts ****************************/
+.bottom-navbar {
+    width: 100%;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid navy;
+    font-size: 13px;
+
+}
+
+.newsupdate {
+    background-color: #DE4655;
+    color: white;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.calendar {
+    background-color: #EB8222;
+    color: white;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.templates {
+    display: grid;
+    grid-template-columns: auto auto;
+    color: white;
+    background-color: green;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.templates-right {
+    text-align: right;
+    margin-right: 5px;
+}
+
+
+/************** newsupdate ends ****************************/
+
+/* filter parts styles starts */
+.page1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    border: 1px solid rgb(196, 186, 186);
+    /* font-size: 13px; */
+
+}
+
+.filter-dashboard {
+
+    display: grid;
+    grid-template-columns: auto;
+    background-color: rgb(91, 76, 142);
+    color: white;
+    height: 35px;
+
+
+}
+
+.filter-dashboard p {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.filterpart {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    height: 30px;
+    /* padding-top: 5px; */
+}
+
+.filter p {
+    margin-left: 8px;
+}
+
+.metadata {
+    width: 160px;
+    height: 25px;
+}
+
+.sca_number {
+    margin-left: 8px;
+    font-size: 16px;
+
+}
+
+.scanumber-dropdowns {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.scrab {
+    margin-left: 8px
+}
+
+.scrab p,
+.scrab select {
+    width: 315px;
+
+}
+
+.contract p,
+.contract select {
+    width: 315px;
+    margin-left: 8px;
+}
+
+.fi-title {
+    width: 350px;
+    height: 30px;
+}
+
+.fil-drops {
+    width: 60px;
+    height: 25px;
+}
+
+.filter-drops {
+    width: 80px;
+    height: 25px;
+}
+
+/***************** filter part ends********************/
+/***************** Total cost ************************/
+.total_cost {
+    background-color: rgb(101, 76, 124);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    width: 320px;
+    margin-left: 8px;
+}
+
+/******************** chevron wheel ***********************/
+
+.chevron {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/********************footer part starts*********************/
+
+footer {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+}
+
+.footer_left {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 40px;
+    color:#264990;
+    font-weight: bold;
+
+}
+
+.footer_right {
+    margin-right: -10px;
+}
+/* .total_cost{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+} */
+
+
+/***************** media queries starts ***********************/
+@media screen and (max-width: 1204px) {
+
+    .flow1-text,
+    .flow1-icons {
+        width: 800px;
+        font-size: 11px;
+    }
+
+    .workflow1 {
+        margin-top: 50px;
+    }
+
+    .line {
+        width: 700px;
+    }
+
+    .Army_logo-img {
+        width: 80px;
+    }
+
+    .Army_logo-title {
+        font-size: 16px;
+    }
+
+    .Army_logo-subtitle {
+        font-size: 13px;
+        margin-right: 30px;
+    }
+
+    .table_body {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+
+}

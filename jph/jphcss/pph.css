@@ -1,0 +1,15 @@
+#data{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 50px;
+    text-align: center;
+    /* background-color: antiquewhite; */
+    
+}
+.card{
+    border: 1px black solid;
+    /* height: 150px;
+    width: 150px; */
+    text-align: center;
+    
+}

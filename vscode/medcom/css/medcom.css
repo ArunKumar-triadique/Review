@@ -1,0 +1,490 @@
+
+*{
+    font-family: 'Segoe UI';
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    
+}
+/* .body{
+    width: 80%;
+} */
+
+.header{
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: auto auto;
+    /* width: 100%; */
+}
+
+
+
+/* LOGO PART CSS */
+/* LOGO PART CSS */
+.logo{
+    display: grid;
+    grid-template-columns:110px 1fr;
+    /* width:320px; */
+    margin-left: 20px;
+    margin-top: 30px;
+
+}
+
+.logo-img{
+    width:220px;
+    /* margin-left: 80px;
+    margin-bottom: 10px; */
+}
+
+/* WORKFLOW PART CSS */
+/* WORKFLOW PART CSS */
+
+.flow1-text,
+.flow1-icons{      
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 800px;
+    height: 35px;
+    text-align: center;
+    font-size: 13px;
+    /* margin-top: 15px; */
+}
+.flow1-text{
+    margin-top: 30px;
+    
+}
+
+
+.line{
+    content: "";
+    width:700px;
+    margin-left: 70px;
+    border-bottom: 1px dashed black;
+    position: relative;
+    top: -18px;
+    z-index: -1;
+}
+
+
+.flow1-text,
+.flow2-text{
+    font-size: 13px;
+    font-weight: 500;
+
+}
+
+.workflow{
+    float: right;
+}
+
+/* nav sty start */
+
+.navbar {
+
+    overflow: hidden;
+    background-color:#264990;
+  }
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 150px;
+  }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: purple;
+  }
+  .dropdown-content {
+    display: none;
+    float: left;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .scrabmonth{
+    margin-left:-150px;
+    border: none;
+    background-color: inherit;
+    color:whitesmoke
+}
+.reportbtn{
+    margin-left:-180px;
+    border: none;
+    background-color: inherit;
+    color:whitesmoke
+}
+/* nav sty end */
+.notification{
+    border: 1px solid black;
+}
+
+.notification-right span{
+    color:white;
+    margin-right: 15px;
+    
+}
+
+.notification-left{
+    display: grid;
+    grid-template-columns: auto auto;
+    color: white;
+    gap: 10px;
+    margin-top: 7px;
+}
+
+.notification-left-p1{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.notification-left-p2{
+    width: 20px;
+    height: 16px;
+    background-color: rgb(30, 30, 92);
+    text-align: center;   
+    border-radius: 2px;
+    padding-bottom: 20px;   
+}
+.table_content{
+  max-height:600px;  
+ overflow-y: scroll; 
+ border:1px solid black;
+}
+
+table{
+
+    border-collapse: collapse;
+    width:100%;
+}
+ 
+  td,th{
+    
+     padding: 8px;
+     }  
+th{
+    color:white;
+    background-color: rgb(88, 18, 194);
+    position: sticky;
+    top:0;
+    text-align: left;
+}
+
+.table_head{
+    position:sticky;
+    
+}
+tr:nth-child(odd){
+    background-color: rgb(149,177,219);
+}
+a{
+text-decoration: none;
+font-size: 12px;
+color:rgb(15,15,182);
+}
+
+/* 
+.table_content{
+    height: 500px
+} */
+
+
+.notification{
+    background-color: rgb(43, 129, 234);
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 35px;
+    justify-content: space-between;
+}
+
+
+.notification-p{
+    color:white;
+    margin-top: 6px;
+}
+.notification-left{
+    margin-left: 10px;
+}
+
+
+.bottom-navbar{
+    width: 100%;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 7px;
+    border: 2px solid navy;
+    
+}
+.newsupdate{
+    background-color: #de4655;
+    color: #444444;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+.calendar{
+    background-color: #eb8222;
+    color: #444444;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+.templates{
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #444444;
+    background-color: #47ba76;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+.templates-right{
+    text-align: right;
+    margin-right: 5px;
+}
+
+.body{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left: 10%;
+    font-size: 13px;
+}
+
+
+/* FILTER PART CSS */
+/* filter parts styles starts */
+.page1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    border: 1px solid rgb(196, 186, 186);
+    /* font-size: 13px; */
+
+}
+
+.filter-dashboard {
+
+    display: grid;
+    grid-template-columns: auto;
+    background-color: rgb(91, 76, 142);
+    color: white;
+    height: 35px;
+
+
+}
+
+.filter-dashboard p {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.filterpart {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    height: 30px;
+    /* padding-top: 5px; */
+}
+
+.filter p {
+    margin-left: 8px;
+}
+
+.metadata {
+    width: 160px;
+    height: 25px;
+}
+
+.sca_number {
+    margin-left: 8px;
+    font-size: 16px;
+
+}
+
+.scanumber-dropdowns {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.scrab {
+    margin-left: 8px
+}
+
+.scrab p,
+.scrab select {
+    width: 315px;
+
+}
+
+.contract p,
+.contract select {
+    width: 315px;
+    margin-left: 8px;
+}
+
+.fi-title {
+    width: 350px;
+    height: 30px;
+}
+
+.fil-drops {
+    width: 60px;
+    height: 25px;
+}
+
+.filter-drops {
+    width: 80px;
+    height: 25px;
+}
+
+/***************** filter part ends********************/
+/***************** Total cost ************************/
+.total_cost {
+    background-color: rgb(101, 76, 124);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    width: 320px;
+    height: max-content;
+    margin-left: 8px;
+}
+
+.chevron{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+footer {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+}
+
+.footer_left {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 40px;
+    color:#264990;
+    font-weight: bold;
+
+}
+
+.footer_right {
+    margin-right: -10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .header{
+display: inline-block;
+width: 500px
+    }
+    .line{
+        width:300px
+    }
+    .body{
+        display: inline-block;
+        width: 700px
+            }
+    
+/* .flow2-text,
+.flow2-icons{           
+    width: 500px;
+    font-size: 8px;
+  } */
+  .flow1-text,
+.flow1-icons{
+    float: left;
+    width: 400px;
+    font-size: 8px;
+}
+.line{
+    
+    float: left;
+    width: 300px;
+    /* justify-content: ; */
+}
+.navbar{
+    width: 800px;
+}
+.page1{
+    /* border: none; */
+    margin: auto;
+    align-items: center;
+    width: 50%
+}
+.logo{
+ margin: auto;
+}
+.workflow{
+    margin: auto;
+}
+/* .workflow2-title {
+    width: 400px;
+    font-size: 13px;
+} */
+/* .workflow1-title{
+    width:300x;
+    font-size: 13px;
+   
+} */
+/* .workflow1-title p{
+     margin-left: 15px; 
+    font-size: 12px;
+} */
+
+ /* .workflow2-title p{
+    margin-left: 15px;
+    font-size: 12px;
+}  */
+ /* .table-th{
+    font-size: 12px;
+}
+ .table-tr1{
+    font-size: 12px;
+ }
+ .table-p1,.table-p2,.table-p3,.table-p4,.table-p5,.table-p6,.table-p7{
+    font-size: 12px;
+ }  */
+}

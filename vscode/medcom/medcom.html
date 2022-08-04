@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/medcom.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+
+    <!-- BOOTSTRAP CDN LINK -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css"
+        integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- <script src="../medcom/javaScript/medcomAddmethod.js"></script> -->
+    <script src="../medcom/javaScript/medcomGetAllmethod.js"></script>
+
+    <div class="header">
+
+
+        <div class="logo">
+            <a href="../medcom/medcom.html">  <img src="../medcom/asserts/MedcomLogo.png" class="logo-img"> </a>
+        </div>
+
+
+
+        <div class="workflow">
+
+            <div class="workflow1">
+
+                <div class="flow1-text">
+                    <div>RA OFFICE</div>
+                    <div>BO REQ VERIFICATION</div>
+                    <div>QA/QA</div>
+                    <div>ALL DIRECTORATES</div>
+                    <div>SCARB REVIEW</div>
+                    <div>DEPUTY CHIEF OF STAFF</div>
+                    <div>CHIEF OF STAFF</div>
+                    <div>RM</div>
+                </div>
+
+                <div class=" flow1-icons">
+
+                    <div><i style="font-size: 22px; border: 4px solid rgb(154, 189, 102); color: rgb(120, 163, 80); width: 30px; height: 30px; border-radius: 50%;"
+                            class="fa-solid fa-circle-user"></i></div>
+                    <div><i style="font-size: 22px; border: 4px solid rgb(69, 118, 198); color: rgb(16, 43, 199); width: 30px; height: 30px; border-radius: 50%;"
+                            class="fa-solid fa-circle-user"></i></div>
+                    <div><i style="font-size: 22px; border: 4px solid rgb(165, 89, 180); color: rgb(166, 5, 177); width: 30px; height: 30px; border-radius: 50%;"
+                            class="fa-solid fa-circle-user"></i></div>
+                    <div><i style="font-size: 22px; border: 4px solid rgb(155, 221, 112); color: rgb(54, 232, 27); width: 30px; height: 30px; border-radius: 50%;"
+                            class="fa-solid fa-circle-user"></i></div>
+                    <div><i style="font-size: 22px; border: 4px solid rgb(224, 152, 96); color: rgb(241, 120, 13); width: 30px; height: 30px; border-radius: 50%;"
+                            class="fa-solid fa-circle-user"></i></div>
+                    <div><i style="font-size: 22px; border: 4px solid rgb(241, 123, 115); color: rgb(225, 21, 21); width: 30px; height: 30px; border-radius: 50%;"
+                            class="fa-solid fa-circle-user"></i></div>
+                    <div><i style="font-size: 22px; border: 4px solid rgb(79, 218, 246); color: rgb(32, 165, 205); width: 30px; height: 30px; border-radius: 50%;"
+                            class="fa-solid fa-circle-user"></i></div>
+                    <div><i style="font-size: 22px; border: 4px solid rgb(59, 128, 137); color: rgb(25, 90, 126); width: 30px; height: 30px; border-radius: 50%;"
+                            class="fa-solid fa-circle-user"></i></div>
+
+                </div>
+
+                <div class="line">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAV BAR STARTS HERE -->
+    <!-- <div class="navbar">
+
+        <div class="navbar-content">
+
+            <a href="#" class="navbar-content-home">
+                <span class="fa fa-home"></span>
+                
+                MEDCOM
+            </a>
+
+            <a href="#" class="navbar-content-create">
+                <span class="fa-solid fa-circle-plus"></span>
+                CREATE
+                <span class="fa-solid fa-caret-down"></span>
+            </a>
+        
+
+            <a href="#" class="navbar-content-scarb">
+                <span class="fa-solid fa-calendar-days"></span>
+                SCARB MONTHLY REVIEW SCHEDULE & METRICS
+                <span class="fa-solid fa-caret-down"></span>
+            </a>
+            <a href="#"><span class="fa-regular fa-file-lines"></span> REPORTS </a>
+            <a href="#" class="space"> </a>
+            <a href="#" class="navbar-helpdesk"><span class="fa-solid fa-phone"></span>HELP DESK<span
+                    class="fa-solid fa-caret-down"></span> </a>
+            <a href="#" class="navbar-settings"> <span class="fa-solid fa-gear"></span> SETTINGS </a>
+
+        </div>
+
+    </div> -->
+    <div class="navbar">
+        <a href="#home"><i class="fa fa-home"></i>MEDCOM</a>
+        <div class="dropdown">
+          <button class="dropbtn"><i class=" fa-solid fa-circle-plus "></i>CREATE
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="../create/New_Contract.html" target="_parent">New Contract</a>
+            <a href="#">Option Year Contract</a>
+            <a href="#">Task Order</a>
+            <a href="#">Adjustment</a>
+            <a href="#">Addendum</a>
+          </div>
+        </div> 
+        <a href="#"><button class="scrabmonth"><i class=" fa-solid fa-calendar-days"></i>SCRAB MONTHLY REVIEW SCHEDULE& METRICS</button></a>
+        <a href="#"><button class="reportbtn">REPORTS</button></a>
+      </div>
+    
+    <!--------------------- navbar ends ---------------------------->
+
+    <div class="body">
+        <!-- NOTIFICATION and TABLE -->
+        <div class="total-table">
+
+            <!-- NOTIFICATION BAR STARTS -->
+            <div class="notification">
+
+                <div class="notification-left">
+                    <p class="notification-left-p1">IN REVIEW REQUESTS</p>
+                    <p class="notification-left-p2">5</p>
+                </div>
+
+                <!-- <div class="notification-right"> -->
+                    <!-- <button>SAVE AS</button> -->
+                    <!-- <span class='bi bi-arrows-fullscreen'></span> -->
+                    <!-- <span class="fa-solid fa-angle-up"></span> -->
+
+                <!-- </div> -->
+
+            </div>
+
+
+            <!-- TABLE STARTS HERE -->
+            <div class="table_content">
+
+                <table class="container">
+                    <tr class="table_head">
+                        <th></th>
+                        <th class="sca">SCA NUMBER</th>
+                        <th>CONTRACT DURATION</th>
+                        <th>TOTAL PROJECT COST</th>
+                        <th>REQUESTED COST</th>
+                        <th>CONTRACT TERM</th>
+                        <th>SCARB REVIEW</th>
+                        <th>STATUS</th>
+                    </tr>
+                </table>
+                <!-- TABLE ENDING TAG -->
+            </div>
+
+            <div class="bottom-navbar">
+
+                <div class="newsupdate"> <span class="fa-solid fa-newspaper" class="news"></span> NEWS UPDATES</div>
+
+                <div class="calendar"> <span class="fa-solid fa-calendar-check"></span> CALENDAR</div>
+
+                <div class="templates">
+
+                    <div class="templates-left">
+                        <span class="fa-solid fa-copy"></span> TEMPLATES
+                    </div>
+
+                    <div class="templates-right">
+                        <span class="fa-solid fa-angle-down"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TOTAL TABLE ENDING TAG -->
+        </div>
+
+        <!--------------- filter part starts -------------------->
+        <div class="page1">
+
+
+
+            <div class="filter-dashboard">
+                <p class="fr-title">DASH BOARD</p>
+            </div>
+
+
+
+            <div class="filterpart">
+
+                <div class="filter">
+                    <p class="fil"><span class="fa-solid fa-filter"> FILTERS</span> </p>
+                </div>
+                <div class="filter-dir">
+                    <b>
+                        DIR
+                    </b>
+
+                </div>
+                <div class="metadata select">
+                    <select name="" class="metadata">
+
+                        <option value="1">ALL</option>
+                        <option value="">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="">Default</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="sca_number">
+
+                <div class="scanumber-p">
+                    <p class="t-title">SCA Number</p>
+                </div>
+
+                <div class="scanumber-dropdowns">
+                    <div class="drop-down">
+                        <select name="" class="filter-drops">
+                            <option value="1">ALL</option>
+                            <option value="1">G146</option>
+                            <option value="2">G147</option>
+                            <option value="3">G148</option>
+                        </select>
+                    </div>
+
+                    <div class="drop-down">
+                        <select name="" class="fil-drops">
+                            <option value="1">ALL</option>
+                            <option value="">G4</option>
+                            <option value="">G5</option>
+                            <option value="">G6</option>
+                        </select>
+                    </div>
+
+                    <div class="drop-down">
+                        <select name="" class="fil-drops">
+                            <option value="1">ALL</option>
+                            <option value="">17</option>
+                            <option value="">18</option>
+                            <option value="">19</option>
+                        </select>
+                    </div>
+
+
+                    <div class="drop-down">
+                        <input type="text" class="fil-drops" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="scrab">
+                <p class="scrab-title">Scrab Review</p>
+                <select name="" class="fi-title">
+                    <option value="">Select</option>
+                    <option value="">Default</option>
+                </select>
+            </div>
+            <div class="contract">
+                <p class="t-title">Contract Term</p>
+                <select name="" class="fi-title">
+                    <option value="">Select</option>
+                    <option value="">ADJ</option>
+                    <option value="">BASE</option>
+                </select>
+            </div>
+
+            <!--------------- filter part ends -------------------->
+            <!--------------------- total cost -------------------->
+            <div class="total_cost">
+                <!-- <div class="total"><table>TOTAL</div>
+                    <div class="total"><table>COST</div> -->
+                <div class="">$21,512,358,498.00</div>
+                <!-- <div class="">&#36;</div> -->
+                
+            </div>
+
+            <div class="chevron">
+                <img src="../medcom/asserts/Chevron Wheel.svg" alt="svg" height="310px" />
+            </div>
+
+        </div>
+
+        <!-- BODY ENDING TAG  -->
+    </div>
+
+    <footer>
+        <hr>
+        <div class="footer">
+            <div class="footer_left">
+                <p class="footer-title">SERVICES</p>
+                <P class="footer-title">MILSUITE</P>
+                <P class="footer-title">Accessibility/Section 508</P>
+                <P class="footer-title">Contact <a href="#">MEDCOM BO SCARB</a></P>
+            </div>
+            <div class="floor_right">
+                <p class="footer-title">&copy;2017,USA Medcom Acquisition Process</p>
+            </div>
+    </footer>
+
+
+
+</body>
+
+</html>
