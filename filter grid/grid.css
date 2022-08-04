@@ -9,43 +9,49 @@
     
 }
 
-.first {
+.fiscalyear {
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: center;
     background-color: slateblue;
 }
 
-.second {
+.directorates {
     display: grid;
     grid-template-columns: 3fr 1fr;
 
 }
 
-.right {
+.directoratedir {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
-.right p {
+.directoratedir p {
     margin-right: 30px;
 }
 
-.third>input {
+.contractnumber>input {
     width: 98.5%;
 }
 
-.fi-title {
+.scarb-title {
     width: 100%;
 }
 
-.t-title {
+.title_head {
     margin: 0px;
 }
 
-.drop-down {
+.scadrop-down {
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 100px;
     column-gap: 5px;
+}
+.term-title{
+    width:100%;
+}
+.cor-title{
+    width:100%
 }
