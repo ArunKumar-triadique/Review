@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.header{
+#header{
     display: grid;
     grid-template-columns: 1fr 3fr;
     width: 100%;
@@ -16,47 +16,50 @@
 
 /* LOGO PART CSS */
 /* LOGO PART CSS */
-.logo{
+.brand{
     width:100%;
     margin-left:20%;
     margin-top: 10%;
 
 }
-.logo-title{
+
+.brand-img{
+    width:90px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+}
+
+.header-title{
     font-size: 30px;
     font-weight: bold;
 
 }
-.logo-subtitle{
+.subtitle{
     font-size: 15px;
     margin-left: 30px;
     color:brown;
     letter-spacing: 2px;
     font-weight: bold;
 }
-.logo-img{
-    width:90px;
-    margin-left: 80px;
-    margin-bottom: 10px;
-}
+
 
 /* WORKFLOW PART CSS */
 /* WORKFLOW PART CSS */
 
-.workflow{
+.header-workflow{
     width: 100%;
     text-align: center;
 }
 
-.workflow1-title,
-.workflow2-title{
+.top-workflow-title,
+.bottom-workflow-title{
     font-size: 1rem;
     color:rgb(148, 12, 73);
     text-align: center;    
 }
 
-.flow1-text,
-.flow1-icons{      
+.top-workflow-text,
+.top-workflow-icons{      
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 95%;
@@ -65,8 +68,8 @@
     font-size: 13px;
 }
 
-.flow2-text,
-.flow2-icons{
+.bottom-workflow-text,
+.bottom-workflow-icons{
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr ;
     width: 95%;
@@ -74,7 +77,6 @@
     text-align: center;
     font-size: 13px;
 }
-
 
 .line{
     content: "";
@@ -86,7 +88,7 @@
     z-index: -1;
 }
 
-.workflow1-title p{
+.top-workflow-title p{
     color: rgb(143, 15, 102);
     font-size: 16px;
     font-weight: 700;
@@ -97,7 +99,7 @@
     
 }
 
-.workflow2-title p{
+.bottom-workflow-title p{
     color: rgb(143, 15, 102);
     font-size: 16px;
     font-weight: 700;
@@ -114,7 +116,7 @@
 
 }
 
-.workflow1,
+.top-workflow-text,
 .workflow2{
     margin-top: 20px;
 }

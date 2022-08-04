@@ -1,13 +1,24 @@
-(async () => {
-    let masterdata = await fetch("Assets/SCAContractsMasterList.json");
-    masterdata = await masterdata.json();
+async function masterlist(){
+    try { 
+        let masterdata = await fetch("Assets/SCAContractsMasterList.json");
+            masterdata = await masterdata.json();
+            return masterdata;
+    } catch (error) {
+        alert("Something Went Wrong")
+    }
+}
 
+
+
+
+(async () => {
+
+    
     if (!window.indexedDB) {
         return;
     }
 
-    databasename = "MEDCOM"
-    version = 1
+    
     createdb = indexedDB.open(databasename, version)
 
     createdb.onerror = (event) => {

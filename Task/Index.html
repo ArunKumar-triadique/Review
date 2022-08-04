@@ -6,46 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- ========== CSS LINK ==========  -->
     <link rel="stylesheet" type="text/css" href="./CSS/main.css">
 
+    <!-- ========== FONT AWESOME LINK(ICONS) ==========  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- BOOTSTRAP CDN LINK -->
+    <!-- ========== BOOTSTRAP CDN LINK ========== -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css"
         integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
 </head>
 
-<body style="width:100%">
-
+<body>
     <!-- ============ HEADER (LOG & WORKFLOW) ============ -->
-    <div class="header">
+    <header id="header">
 
-        <div class="logo">
-            <img src="./IMAGES/us army logo.png" class="logo-img">
+        <div class="brand">
+            <img src="./IMAGES/us army logo.png" alt="logo" class="brand-img">
             <strong>
-                <p class="logo-title"><u><span style="color:brown">ARMY</span> MEDICINE</u></p>
+                <p class="header-title"><u><span style="color:brown">ARMY</span> MEDICINE</u></p>
             </strong>
-            <P class="logo-subtitle">SCARB PROCESS</P>
+            <P class="subtitle">SCARB PROCESS</P>
         </div>
 
 
-        <div class="workflow">
+        <div class="header-workflow">
 
-            <div class="workflow1">
+            <div class="top-workflow">
 
-                <div class="workflow1-title">
+                <div class="top-workflow-title">
                     <P>NEW CONTRACT/OPTION YEAR CONTRACT PROCESS</P>
                 </div>
 
-                <div class="flow1-text">
+                <div class="top-workflow-text">
                     <div><br>RA OFFICE</div>
-                    <div>BO REQ VERIFICATION</div>
+                    <div>BO REQ <br> VERIFICATION</div>
                     <div><br>QA/QA</div>
                     <div><br>ALL DIRECTORATES</div>
                     <div><br>SCARB REVIEW</div>
@@ -54,7 +55,7 @@
                     <div><br>RM</div>
                 </div>
 
-                <div class=" flow1-icons">
+                <div class="top-workflow-icons">
 
                     <div><i style="font-size: 22px; border: 4px solid rgb(154, 189, 102); color: rgb(120, 163, 80); width: 30px; height: 30px; border-radius: 50%;"
                             class="fa-solid fa-circle-user"></i></div>
@@ -75,20 +76,20 @@
 
                 </div>
 
+<!-- ========== DOTTED LINE TO CONNECT WORKFLOW ICONS ========== -->
                 <div class="line">
-
                 </div>
 
             </div>
 
 
-            <div class="workflow2">
+            <div class="bottom-workflow">
 
-                <div class="workflow2-title">
+                <div class="bottom-workflow-title">
                     <p>ADJUSTIMENT/ADDENDUM/TASK ORDER/EMERGENCY PROCESS</p>
                 </div>
 
-                <div class="flow2-text">
+                <div class="bottom-workflow-text">
 
                     <div><br>RA OFFICE</div>
                     <div>BO REQ<br> VERIFICATION</div>
@@ -99,7 +100,7 @@
 
                 </div>
 
-                <div class=" flow2-icons">
+                <div class=" bottom-workflow-icons">
 
                     <div><i style="font-size: 22px; border: 4px solid rgb(154, 189, 102); color: rgb(120, 163, 80); width: 30px; height: 30px; border-radius: 50%;"
                             class="fa-solid fa-circle-user"></i></div>
@@ -132,27 +133,27 @@
 
         </div>
 
-    </div>
+    </header>
 
 
     <!-- NAV BAR STARTS HERE -->
-    <div class="navbar">
+    <nav class="navbar">
 
-        <div class="navbar-content">
+        <div class="navbar-container">
 
-            <a href="#" class="navbar-content-home">
+            <a href="#" class="nav-tab home">
                 <span class="fa fa-home"></span>
                 <!-- style="color:white; margin-right: 5px; padding: 11px; font-size: 13px; -->
                 HOME
             </a>
 
-            <a href="#" class="navbar-content-create">
+            <a href="#" class="nav-tab create">
                 <span class="fa-solid fa-circle-plus"></span>
                 CREATE
                 <span class="fa-solid fa-caret-down"></span>
             </a>
 
-            <a href="#" class="navbar-content-scarb">
+            <a href="#" class="nav-tab process">
                 <span class="fa-solid fa-calendar-days"></span>
                 SCARB MONTHLY REVIEW SCHEDULE & METRICS
                 <span class="fa-solid fa-caret-down"></span>
@@ -160,12 +161,12 @@
 
         </div>
 
-    </div>
+    </nav>
 
 
-    <div class="body">
+    <section class="container">
         <!-- NOTIFICATION and TABLE -->
-        <div class="total-table">
+        <div class="table">
 
             <!-- NOTIFICATION BAR STARTS -->
             <div class="notification">
@@ -185,9 +186,9 @@
             </div>
 
             <!-- TABLE STARTS HERE -->
-            <div class="table">
+            <div class="table-view">
 
-                <div class="table-th">
+                <div class="table-header">
 
                     <div>SCA Number</div>
                     <div>Contract Duration</div>
@@ -201,7 +202,7 @@
 
                 </div>
 
-                <div class="table-tr1">
+                <div class="table-row">
                     <div style="color:blue"><input type="checkbox"> <span class="fa-solid fa-caret-down"></span>
                         G146-G4-17-01-Adj1 </div>
                     <div>Sep 2016 to Aug 2021</div>
@@ -214,7 +215,7 @@
                     <div>Waiting for RA Office</div>
                 </div>
 
-                <div class="table-p1">
+                <div class="table-para">
                     <p>A Study Promissing Teacher Preparation Programs. divis study will examine dive
                         relationship
                         between
@@ -225,7 +226,7 @@
                     </p>
                 </div>
 
-                <div class="table-tr2">
+                <div class="table-row-child">
 
                     <div style="color:blue"> <input type="checkbox">G146-G4-17-01-Add1</div>
                     <div>Sep 2016 to Aug 2021</div>
