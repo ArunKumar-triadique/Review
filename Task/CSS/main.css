@@ -127,11 +127,14 @@
     height: 35px;
     width: 100%;
     margin-top: 10px;
-    
-   
+       
 }
 
-.navbar-content span{   
+.navbar-container{
+    margin-left: 46px;
+}
+
+.navbar-container span{   
     color:white;
     margin-right: 5px;
     font-size: 13px;
@@ -139,55 +142,48 @@
 }
 
 
-.navbar-content a{
+.navbar-container a{
     color:white;
     text-decoration: none;
     padding: 5px;
    
 }
-.navbar-content-home{
+.nav-tab-home,
+.nav-tab-create,
+.nav-tab-process{
     border: 1px solid black;
 
 }
 
-.navbar-content-create{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+.container{
+    width: 94vw;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left: 3%;
 }
 
-.navbar-content-scarb{
-    border: 1px solid black;
-
-}
-
-.navbar-content{
-    margin-left: 46px;
-}
-
-.notification{
-    border: 1px solid black;
-}
-
-.notification-right span{
-    color:white;
-    margin-right: 15px;
+.table{
+    width: 100%;
     
 }
 
-.notification-left{
+.notification{
     display: grid;
     grid-template-columns: auto auto;
     color: white;
-    gap: 10px;
-    margin-top: 7px;
+    background-color: rgb(43, 129, 234);
+    border: 1px solid black;
+    height: 35px;
 }
 
-.notification-left-p1{
+.inreview-requests{
     font-size: 14px;
     font-weight: 500;
 }
 
-.notification-left-p2{
+.numberof-requests{
     width: 20px;
     height: 16px;
     background-color: rgb(30, 30, 92);
@@ -196,7 +192,7 @@
     padding-bottom: 20px;   
 }
 
-.table-th{
+.table-header{
     padding-left: 15px;
     padding-top:1px;
     color:white;
@@ -204,103 +200,42 @@
     height: 47px;
     display: grid;
     grid-template-columns: 3fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
-
 }
 
-.table-tr1,
-.table-tr2,
-.table-tr3,
-.table-tr4,
-.table-tr5,
-.table-tr6,
-.table-tr7{
+.table-row,
+.table-row-child{
     display: grid;
     grid-template-columns: 3fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
     margin-top: 10px;
     margin-left: 1%;
+    font-size: 13px;
 }
 
-/* input{
-    width:  25px;
-    height: 25px;
-} */
-
-.table-tr2,
-.table-tr3,
-.table-tr5,
-.table-tr6,
-.table-tr7{
-margin-left: 5%;
+.table-para,
+.table-para-child{
+    color: rgb(32, 101, 221);   
 }
 
-.table-p2,
-.table-p3,
-.table-p5,
-.table-p6,
-.table-p7{
+.table-row-child{
     margin-left: 5%;
 }
 
-
-.table-p1,
-.table-p2,
-.table-p3,
-.table-p4,
-.table-p5,
-.table-p6,
-.table-p7{
-    color: rgb(32, 101, 221);
-    
-    
+.table-para-child{
+    margin-left: 5%;
 }
 
-.table-p1,
-.table-p4{
-    margin-left: 1%;
-    
+.table-para{
+    margin-left: 1%;  
 }
 
 p{
-    font-size: 15px;   
+    font-size: 13px;   
 }
 
-.table{
-    width: 100%;
-    border:1px solid rgb(95, 95, 95);
-    
-}
+
 #table-part2{
     background-color: rgb(229, 238, 249);
     border-top: 1px solid rgb(95, 95, 95);
-}
-
-.notification{
-    background-color: rgb(43, 129, 234);
-    display: grid;
-    grid-template-columns: auto auto;
-    height: 35px;
-    justify-content: space-between;
-}
-
-button{
-    background-color: rgb(105, 198, 86);
-    color:white;
-    font-size: 15px;
-    border: 1px solid rgb(86, 86, 86);
-    margin-top: 6px;
-    margin-right:5px;
-    padding: 1px 8px 1px 8px;
-}
-.notification-p{
-    color:white;
-    margin-top: 6px;
-}
-.notification-left{
-    margin-left: 10px;
-}
-.total-table{
-    width: 100%;
-    /* margin-left: 61px; */
 }
 
 .bottom-navbar{
@@ -331,24 +266,21 @@ button{
     background-color: rgb(62, 149, 87);
     padding-left: 10px;
     padding-top: 4px;
+    justify-content: space-between;
 }
-.templates-right{
+.templates-title{
+    text-align: right;
+    margin-left: 5px;
+}
+
+.templates-icon{
     text-align: right;
     margin-right: 5px;
-}
 
-.body{
-    width: 94vw;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-gap: 10px;
-    margin-top: 10px;
-    margin-left: 3%;
 }
-
 
 /* FILTER PART CSS */
-.page1{
+.filterations{
     width: 100%;
     display: grid;
     grid-template-columns: auto;
@@ -356,7 +288,7 @@ button{
     
 }
 
-.first{
+.fisacal-year{
     
     display: grid;
     grid-template-columns: auto auto;
@@ -367,12 +299,12 @@ button{
     
 }
 
-.first-left p{
+.fisacal-year-title p{
     margin-top: 10px;
     margin-left: 10px;
 }
 
-.first-right{
+.fisacal-year-dropown{
     margin-top: 10px;
     margin-right: 10px;
 }
@@ -394,10 +326,6 @@ button{
 .second-left p{
     margin-left: 5px;
 }
-
-/* .second-left span{
-    margin-right: 5px;
-} */
 
 .second-right{
     display: flex;

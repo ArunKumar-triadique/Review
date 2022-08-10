@@ -6,35 +6,90 @@
     box-sizing: border-box;
 }
 
-
  /*===== HEADER = LOGO + WORK FLOW =====*/
-.header{
+#header{
     display: grid;
     grid-template-columns: 1fr 3fr;
     width: 80%;
     margin-left: 10%;
     margin-top: 20px;
     margin-bottom: 20px;
+
 }
 
-.logo img{
-    height: 120px;
+#brand img{
+    margin-top: 10px;
+    height: 100px;
 }
 
 /*===== WORKFLOW PART CSS =====*/
-.workflow{
+.contractWorkflow{
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 
-.workflow-text,
-.workflow-icons{      
+.contractWorkflowText,
+.contractWorkflowIcons{      
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 96%;
     height: 35px;
     text-align: center;
+}
+
+.raOffice,
+.boReqVerification,
+.qaQc,
+.allDirectorates,
+.scarbReview,
+.deputyChiefOfStaff,
+.chiefOfStaff,
+.rm{
+    font-size: 22px;
+    height: 30px; 
+    width: 30px;
+    border-radius: 50%;
+}
+
+.raOffice{    
+    border: 4px solid rgb(154, 189, 102);
+    color: rgb(120, 163, 80);   
+}
+
+.boReqVerification{   
+    border: 4px solid rgb(69, 118, 198); 
+    color: rgb(16, 43, 199);      
+}
+
+.qaQc{    
+    border: 4px solid rgb(165, 89, 180); 
+    color: rgb(166, 5, 177); 
+}
+
+.allDirectorates{   
+    border: 4px solid rgb(155, 221, 112); 
+    color: rgb(54, 232, 27); 
+}
+
+.scarbReview{    
+    border: 4px solid rgb(224, 152, 96); 
+    color: rgb(241, 120, 13); 
+}
+
+.deputyChiefOfStaff{   
+    border: 4px solid rgb(241, 123, 115); 
+    color: rgb(225, 21, 21); 
+}
+
+.chiefOfStaff{    
+    border: 4px solid rgb(79, 218, 246); 
+    color: rgb(32, 165, 205); 
+}
+
+.rm{ 
+    border: 4px solid rgb(59, 128, 137); 
+    color: rgb(25, 90, 126); 
 }
 
 /*===== DOTTED LINE TO CONNECT WORK FLOW ICONS =====*/
@@ -48,7 +103,7 @@
     z-index: -1;
 }
 
-.workflow-text{
+.contractWorkflowText{
     font-size: 0.68rem;
     font-weight: 500;
     margin-bottom: 20px;
@@ -61,76 +116,86 @@
     height: 34px;
     width: 100% ;
     margin-top: 10px;
-    outline: none;
+    
 }
 
-.navbar-content{
+.navbarContainer{
     margin-left: 10%;
     font-size: 13px;    
 }
 
-.navbar-content span{   
+.navbarContainer span{   
     color:white;
     margin-right: 5px;
     font-size: 0.81rem;
     padding: 12px;   
 }
 
-.navbar-content a{
+.navbarContainer a{
     color:white;
     text-decoration: none;
-    padding: 5px;
-   
-}
-.navbar-content-home,
-.navbar-content-create,
-.navbar-content-scarb,
-.navbar-content-reports,
-.navbar-content-helpdesk,
-.navbar-content-settings{
-border: 1px solid black;
+    padding: 7px;
 }
 
-.notification{
-    padding: 2px;
-    background-color: #3C7ECC;
-    height: 35px;
-    width: 200px;   
+.navbarHome,
+.navbarCreate,
+.navbarScarbreview,
+.navbarReports,
+.navbarHelpdesk,
+.navbarSettings{
+    border-left: 1px solid black;
 }
 
-.notification-right span{
-    color:white;
-    margin-right: 15px;
+.navbarHelpdesk{
+    border-right: 1px solid black;
     
 }
 
-.notification-left{
+/*===== BODY = NAVBAR + TABLE DATA + BOTTOM NAV BAR + FILTER =====*/
+#body{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left:10%;
+}
+
+.notification{
+    padding: 6px;
+    background-color: #3C7ECC;
+    height: 35px;
+    width: 200px; 
     display: grid;
     grid-template-columns: auto auto;
     color: white;
     gap: 10px;
-    margin-top: 7px;
+    margin-top: 7px;  
 }
 
-.notification-left-p1{
+.notificationInreview{
+    padding-top:2px ;
     font-size: 0.81rem;
     font-weight: 500;
 }
 
-.notification-left-p2{
-    width: 20px;
-    height: 16px;
+.notificationsCount{
     background-color: rgb(30, 30, 92);
     text-align: center;   
-    border-radius: 2px;
-    padding-bottom: 20px;   
+    border-radius: 10px;   
 }
 
-table{
+.tableView{
+    border: 2px solid rgb(170, 170, 170); 
+    width: 100%;
+} 
+
+#tableData{
+    border-collapse: collapse;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width:100%;
-    
 }
+
 
 td,th{
     font-size: 0.81rem;
@@ -140,39 +205,25 @@ td,th{
 tr:nth-child(even){
     background-color:#F1F9FF;
 }
-
-.table-content{
-    border: 2px solid rgb(170, 170, 170); 
-    width: 100%;
-  } 
-
-#tableData{
-    border-collapse: collapse;
-} 
-
-  th{
+ 
+th{
     position: sticky;
     top: 0px;
     background-color: #6A9ED8;
     color: white;
-    text-align: left;
-    /* width: 15%; */
-  }
+    text-align: left;    
+}
+
+.projectName{
+    font-weight: 600;
+}
 
   /*===== TABLE DATA FROM JAVA SCRIPT =====*/
-  /*===== PROJECT NAME =====*/
-  a{
+
+a{
     color:blue;
     text-decoration: none;
   }
-
-.notification-p{
-    color:white;
-    margin-top: 6px;
-}
-.notification-left{
-    margin-left: 10px;
-}
 
 .bottom-navbar{   
     width: 100%;
@@ -210,20 +261,9 @@ tr:nth-child(even){
     background-color: #47BA75;   
 }
 
-.templates-right{
+.templates-dropdownIcon{
     text-align: right;
     margin-right: 5px;
-}
-
-/*===== BODY = NAVBAR + TABLE DATA + BOTTOM NAV BAR + FILTER =====*/
-.body{
-    width: 80%;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-gap: 10px;
-    margin-top: 10px;
-    margin-left:10%;
-    /* overflow: none; */
 }
 
 
@@ -347,7 +387,7 @@ footer{
 /*===== MEDIA QUERRIES UPTO 1024PX =====*/
 @media screen and (max-width:1024px) {
 
-.header{
+#header{
     display: grid;
     grid-template-columns: 1fr;
     width:80%;
@@ -385,8 +425,8 @@ footer{
     font-size: 10px
 }
 
-.body{
-    width: 80%;
+#body{
+    width: 80vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
@@ -397,13 +437,6 @@ footer{
 .filteration{
     width: 300px;
     margin-top: 20px;
-}
-
-.navbar{
-    background-color: #264990;
-    height: 30px;
-    width: 100% ;
-    margin-top: 10px;
 }
 
 .navbar-content span{   

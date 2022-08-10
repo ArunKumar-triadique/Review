@@ -1,51 +1,92 @@
-async function masterlist(){
-    try { 
-        let masterdata = await fetch("Assets/SCAContractsMasterList.json");
-            masterdata = await masterdata.json();
-            return masterdata;
+// ===== FETCHING MASTER DATA =====
+async function masterData() {
+    try {
+        let masterdata = await fetch("Assets/SCAContractsMasterList.json")
+            masterdata = await masterdata.json()
+        return masterdata
     } catch (error) {
         alert("Something Went Wrong")
     }
 }
 
+// ===== FETCHING META DATA =====
+async function metaData() {
+    try {
+        let metadata = await fetch("./Assets/SCAContractMetadata.json")
+        metadata = await metadata.json()
+        return metadata
+    } catch (error) {
+        alert("Something Went Wrong")
+    }
+}
 
+function htmlSnippet(items) {
+
+    let snippet;
+
+    items.forEach(element => {
+
+        var End_date = new Date(element.POP_End_Date)
+        var start_date = new Date(element.POP_Start_Date)
+
+        if (element) {
+            snippet = `${snippet ? snippet : " "}
+
+                    <tr>                                                     
+                        <td class="checkbox"><input type="checkbox"></input></td>                       
+                        <td>${element.SCA_Number}<br><a href="#"target=_blank class="projectName"><br>${element.Project_Name}</a></td>                                                
+                        <td>${months[start_date.getMonth()]}-${start_date.getUTCFullYear()} to ${months[End_date.getMonth()]}-${End_date.getUTCFullYear()}</td>
+                        <td>${element.POP_Cost}</td>
+                        <td>${element.Total_Project_Cost}</td>
+                        <td>${element.Contract_Term}</td>
+                        <td>${element.SCARB_Review_Month}</td>
+                        <td>${element.Status_Title}</td>
+                    </tr>`
+        }
+    })
+    
+    let dataTable = document.querySelector("#tableData tbody")
+    dataTable.innerHTML = snippet
+
+    return snippet
+}
 
 
 (async () => {
 
-    
     if (!window.indexedDB) {
         return;
     }
 
-    
+    databasename = "MEDCOM"
+    version = 1
+
     createdb = indexedDB.open(databasename, version)
 
     createdb.onerror = (event) => {
         console.log(event.target.result)
     }
 
-    createdb.onsuccess = (event) => {
-        let database = event.target.result
+    createdb.onsuccess = async (event) => {
+        let database = event.target.result;
+
 
         getalldata(database)
 
-        // masterdata.forEach(element => {
-        //     insertdata(database, element)
-        // })
+        let setlocal = await metaData();
+        localStorage.setItem("result", JSON.stringify(setlocal));
     }
 
     createdb.onupgradeneeded = (event) => {
         database = event.target.result
 
         collection = database.createObjectStore("MASTER_DATA", { autoIncrement: true })
-
     }
 
     // ===================ADD FUNCTION=========================== 
     function insertdata(database, masterdata) {
 
-        // =========== CREATE NEW TRANSACTION ON DATABASE ===========
+    // =========== CREATE NEW TRANSACTION ON DATABASE ===========
         txn = database.transaction("MASTER_DATA", "readwrite");
 
         store = txn.objectStore("MASTER_DATA")
@@ -65,58 +106,75 @@ async function masterlist(){
         }
     }
 
+    function filter(masterData) {
 
+        let getLocal = localStorage.getItem("result");
+            getLocal = JSON.parse(getLocal)
 
-    // ============================= GET ALL DATA (MASTER DATA) ===========================
+            getLocal.forEach((item) => {
+                list2 = `${list2}<option value="${item.Directorates}">  ${item.Directorates}  </option>`
+        })
 
-    function getalldata(database) {
+        // ========== TO REMOVE DUPLICATE & NULL VALUE ==========     
+        let primarystaff = Array.from (new Set(masterData.map(item => item.Primary_Staff))).sort()           
+        let Fiscalyear = new Set(masterData.map(item => item.FiscalYear)) 
+        let scarbreview = new Set(masterData.map(item => item.SCARB_Review_Month))
+        let ContractTerm = Array.from(new Set(masterData.map(item => item.Contract_Term))).sort()
+           
+        primarystaff.forEach(item => {
+            list1 = `${list1}<option value=${item}> ${item} </option>`
+        })
+
+        Fiscalyear.forEach(item => { 
+            list3 = `${list3}<option value="${item}"> ${item.slice(2)} </option>`
+        })
+
+        scarbreview.forEach(item => {
+            list4 = `${list4}<option value="${item}">${item}</option>`
+        })
+
+        ContractTerm.forEach(item => {
+            list5 = `${list5}<option value="${item}"> ${item} </option>`
+        })
+
+        // ========== TO DISPLAY DATA IN HTML ==========
+        let dir = document.querySelector(".all_dir");
+        dir.insertAdjacentHTML("afterend", list2)
+
+        primarystaff = document.querySelector(".all_Primary_Staff");
+        primarystaff.insertAdjacentHTML("afterend", list1)
+
+        let directorates2_list = document.querySelector(".all_directorates2");
+        directorates2_list.insertAdjacentHTML("afterend", list2)
+
+        FiscalYear = document.querySelector(".fiscalYearList");
+        FiscalYear.insertAdjacentHTML("afterend", list3)
+
+        scarbreview = document.querySelector(".scarbReviewList");
+        scarbreview.insertAdjacentHTML("afterend", list4)
+
+        ContractTerm = document.querySelector(".all_Contract_Term");
+        ContractTerm.insertAdjacentHTML("afterend", list5);
+
+    }
+
+    // =============== GET ALL DATA (MASTER DATA) ===============
+    async function getalldata(database) {
         const txn = database.transaction("MASTER_DATA", "readwrite")
         const objectStore = txn.objectStore("MASTER_DATA")
         let mydataget = objectStore.getAll();
-        mydataget.onsuccess = (event) => {
 
-            let value;
-            let value1 = '';  // ========== FISCAL YEAR LIST ==========
-            let value2 = '';  // ========= SCARB REVIEW LIST ==========          
+        master = mydataget;
+        mydataget.onsuccess = (event) => {
+          
             let fiscalYear = document.querySelector(".fiscalYearList");
             let scarb_review_month = document.querySelector(".scarbReviewList")
             let database = event.target.result
 
-            let dataTable = document.querySelector("tr")
-            database.forEach(element => {
-
-                var End_date = new Date(element.POP_End_Date)
-                var start_date = new Date(element.POP_Start_Date)
-                var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
-                if (element && element.Title) {
-                    value = `${value ? value : " "}
-
-                        <tr>                                                     
-                            <td><input type="checkbox"></input></td>                       
-                            <td> ${element.SCA_Number}<br>
-                            <a href="#"target=_blank><br>
-                            ${element.Project_Name}</a>
-                            </td>                      
-                            <td>${months[start_date.getMonth()]}-${start_date.getUTCFullYear()} to ${months[End_date.getMonth()]}-${End_date.getUTCFullYear()}</td>
-                            <td>$${element.POP_Cost}</td>
-                            <td>$${element.Total_Project_Cost}</td>
-                            <td>${element.Contract_Term}</td>
-                            <td>${element.SCARB_Review_Month}</td>
-                            <td>${element.Status_Title}</td>
-                        </tr>`
-
-                        
-
-                    value1 += `<option> ${element.FiscalYear.slice(2)} </option>` 
-                    value2 += `<option> ${element.SCARB_Review_Month} </option>`
-                                                              
-            }
-            });
-
-            dataTable.insertAdjacentHTML("afterend", value)
-            fiscalYear.insertAdjacentHTML("afterend", value1)           // ===== TO DISPLAY FISCAL YEAR LIST IN HTML =====
-            scarb_review_month.insertAdjacentHTML("afterend", value2)   // ===== TO DISPLAY SCARB REVIEW LIST IN HTML ====
-       
+            let filterdata = filter(database);
+            value = htmlSnippet(database)
+            fiscalYear.insertAdjacentHTML("afterend", value1)           
+            scarb_review_month.insertAdjacentHTML("afterend", value2)   
         };
 
         txn.oncomplete = function () {
@@ -126,266 +184,115 @@ async function masterlist(){
 
 })();
 
-
-// ================================ META DATA ================================
-// ================================ META DATA ================================
-
-
-async function data() {
-
-    let d = await fetch("./Assets/SCAContractMetadata.json");
-    d = await d.json()
-    let data = JSON.stringify(d);
-    localStorage.setItem('result', data)
-
-    let list1 = '';   // ====== DIRECTORATES LIST =====
-    let list2 = '';   // ====== PRIMARY STAFF LIST =====
-    let list3 = '';   // ====== SCA NUMBER DIR LIST =====
-    let list4 = '';   // ====== CONTRACT TERM LIST =====
-
-    var metadata = d.map((item, index) => {
-        
-        list1 = `${list1}<option value=${item.Directorates}>  ${item.Directorates}  </option>`
-        list2 = `${list2}<option value=${item.Primary_Staff}> ${item.Primary_Staff} </option>`
-        list3 = `${list3}<option value=${item.Directorates}>  ${item.Directorates}  </option>`
-        list4 = `${list4}<option value=${item.Contract_Term}> ${item.Contract_Term} </option>`
-        return true
-    })
-
-    let dir = document.querySelector(".all_dir");
-    dir.insertAdjacentHTML("afterend", list1)
-
-    let Primary_Staff_list = document.querySelector(".all_Primary_Staff");
-    Primary_Staff_list.insertAdjacentHTML("afterend", list2)
-
-    let directorates2_list = document.querySelector(".all_directorates2");
-    directorates2_list.insertAdjacentHTML("afterend", list3)
-
-    let Contract_Term_list = document.querySelector(".all_Contract_Term");
-    Contract_Term_list.insertAdjacentHTML("afterend", list4)
-
-
-} data();
-
-
-// ================================== DIR FILTER ==================================
-// ================================== DIR FILTER ==================================
-
-
+// ========== DIRECTORATES FILTERATION ==========
 function dirFilter() {
-    let all_dirs = document.getElementById("dir").value.toUpperCase();
-
-    let tableData = document.getElementById("tableData");
-    let tr = tableData.getElementsByTagName("tr")
-
-    for (i = 0; i < tr.length; i++) {
-
-        let td = tr[i].getElementsByTagName("td")[1];
-
-        if (td) {
-            let textValue = td.textContent.split("-");
-
-            if (textValue[1] == "SS") {
-                
-                if (textValue[2].toUpperCase().indexOf(all_dirs) > -1) {
-                    tr[i].style.display = "";
-                }
-                else {
-                    tr[i].style.display = "none";
-                }
-            }
-            else {
-                if (textValue[1].toUpperCase().indexOf(all_dirs) > -1) {
-                    tr[i].style.display = "";
-                }
-                else {
-                    tr[i].style.display = "none";
-                }
-            }
-        }
+    let all_dirs = document.getElementById("dir").value.toLowerCase();
+    let allPrimaryStaff = document.getElementById("Primary_Staff_list").value = "all_Primary_Staff";
+    if (all_dirs != "all_dir") {
+        master1 = master.result.filter(item => item.Directorate.toLowerCase() === all_dirs)
+        htmlSnippet(master1)
+    } else {
+        htmlSnippet(master.result)
     }
 }
 
-// =============================== PRIMARY STAFF LIST FILTER ===============================
-// =============================== PRIMARY STAFF LIST FILTER ===============================
-
-
+// ========== PRIMARY STAFF FILTERATION ==========
 function primaryStaffFilter() {
-    let all_Primary_Staff = document.getElementById("Primary_Staff_list").value.toUpperCase();
-    let tableData = document.getElementById("tableData");
-    let tr = tableData.getElementsByTagName("tr")
+    let all_dirs = document.getElementById("dir").value.toLowerCase() != "all_dir" ? document.getElementById("dir").value.toLowerCase() : null;
 
-    for (i = 0; i < tr.length; i++) {
-        let td = tr[i].getElementsByTagName("td")[1];
+    let allPrimaryStaff = document.getElementById("Primary_Staff_list").value.toLowerCase();
+    if (allPrimaryStaff != "all_primary_staff") {
+        master1 = master.result.filter(item => {
 
-        if (td) {
-            let textValue = td.textContent
-            if (textValue.toUpperCase().indexOf(all_Primary_Staff) > -1) {
-                tr[i].style.display = "";
+            if(all_dirs !== null){
+                return item.Directorate.toLowerCase() === all_dirs && item.Primary_Staff.toLowerCase() === allPrimaryStaff
+            }else{
+                return item.Primary_Staff.toLowerCase() === allPrimaryStaff   
             }
-            else {
-                tr[i].style.display = "none";
-            }
-        }
+        })
+        htmlSnippet(master1)
+    } else if(all_dirs !== null){
+        master1 = master.result.filter(item=>item.Directorate.toLowerCase() === all_dirs)
+        htmlSnippet(master1)
+    } else {
+        htmlSnippet(master.result)
     }
+ 
 }
 
-
-// =============================== SCA DIRECTORATES2 FILTER ===============================
-// =============================== SCA DIRECTORATES2 FILTER ===============================
-
-
+// ========== DIRECTORATES FILTERATION ==========
 function scaDirectoratesFilter() {
-    let all_directorates2 = document.getElementById("directorates2_list").value.toUpperCase();
-    let tableData = document.getElementById("tableData");
-    let tr = tableData.getElementsByTagName("tr")
-
-    for (i = 0; i < tr.length; i++) {
-        let td = tr[i].getElementsByTagName("td")[1];
-        if (td) {
-            let textValue = td.textContent.split("-")
-
-            if (textValue[1] == "SS") {
-                
-                if (textValue[2].toUpperCase().indexOf(all_directorates2) > -1) {
-                    tr[i].style.display = "";
-                }
-                else {
-                    tr[i].style.display = "none";
-                }
-            }
-            else {
-                if (textValue[1].toUpperCase().indexOf(all_directorates2) > -1) {
-                    tr[i].style.display = "";
-                }
-                else {
-                    tr[i].style.display = "none"; 
-                }
-            }
-        }
+    let alldir2 = document.getElementById("directorates2_list").value.toLowerCase();
+    if (alldir2 != "all_directorates2") {
+        master1 = master.result.filter(item => item.Directorate.toLowerCase() === alldir2)
+        htmlSnippet(master1)
+    } else {
+        htmlSnippet(master.result)
     }
 }
 
-
-// =============================== FISCAL YEAR FILTER ===============================
-// =============================== FISCAL YEAR FILTER ===============================
-
-
+// ========== DIRECTORATES FILTERATION ==========
 function fiscalYearFilter() {
-    let fiscalYearList = document.getElementById("fiscalYear").value;
-    let tableData = document.getElementById("tableData");
-    let tr = tableData.getElementsByTagName("tr")
-
-    for (i = 0; i < tr.length; i++) {
-        let td = tr[i].getElementsByTagName("td")[1];
-
-        if (td) {
-            let textValue = td.textContent.split("-");
-
-            if (textValue[1] == "SS" ) {
-
-                if (textValue[3].toUpperCase().indexOf(fiscalYearList) > -1) {
-                    tr[i].style.display = "";
-                }
-                else {
-                    tr[i].style.display = "none";
-                }
-            }
-
-        else {
-                if (textValue[2].toUpperCase().indexOf(fiscalYearList) > -1) {
-                    tr[i].style.display = "";
-                }
-                else {
-                    tr[i].style.display = "none";
-                }
-
-            }
-        }
+    let fiscalyears = document.getElementById("fiscalYear").value;
+    if (fiscalyears != "fiscalYearList") {
+        master1 = master.result.filter(item => item.FiscalYear === fiscalyears)
+        htmlSnippet(master1)
+    } else {
+        htmlSnippet(master.result)
     }
 }
 
+// ========== SCARB REVIEW FILTERATION ==========
+function scarbReviewFilter() {
+    let scarbreviews = document.getElementById("scarb_review_month").value;
+    if (scarbreviews != "scarbReviewList") {
+        master1 = master.result.filter(item => item.SCARB_Review_Month === scarbreviews)
+        htmlSnippet(master1)
+    } else {
+        htmlSnippet(master.result)
+    }
+}
+
+// ========== CONTRACT TERM FILTERATION ==========
+function contractTermFilter() {
+    let contracts = document.getElementById("Contract_Term_list").value.toLowerCase();
+    if (contracts != "all_contract_term") {
+        master1 = master.result.filter(item => item.Contract_Term.toLowerCase() === contracts)
+        htmlSnippet(master1)
+    } else {
+        htmlSnippet(master.result)
+    }
+}
+
+// ========== SEARCH BOX ==========
 function searchFun() {
     let filter = document.getElementById("myInput").value;
     let tableData = document.getElementById("tableData");
     let tr = tableData.getElementsByTagName("tr")
-    
-    for (i = 0; i < tr.length; i++) {
-        let td = tr[i].getElementsByTagName("td")[1];
 
-        if (td) {
-            let textValue = td.textContent.split("-"); 
-            
-            if (textValue[1] == "SS" ) {
+    if (filter.length >= 3) {
 
-                    if (textValue[4].indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    }
-                    else {
-                        tr[i].style.display = "none";
-                    }
+        for (i = 0; i < tr.length; i++) {
+            let td = tr[i].getElementsByTagName("td")[1];
+
+            if (td) {
+                let textValue = td.textContent;
+
+                if (textValue.indexOf(filter) > -1) {
+                    tr[i].style.display = "";
                 }
-
-            else {
-                    if (textValue[3].indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    }
-                    else {
-                        tr[i].style.display = "none";
-                    }
-
+                else {
+                    tr[i].style.display = "none";
                 }
-        }
-    }
-}
-
-
-// =============================== SCARB REVIEW FILTER ===============================
-// =============================== SCARB REVIEW FILTER ===============================
-
-
-function scarbReviewFilter() {
-    let scarbReviewList = document.getElementById("scarb_review_month").value.toUpperCase();
-    let tableData = document.getElementById("tableData");
-    let tr = tableData.getElementsByTagName("tr")
-
-    for (i = 0; i < tr.length; i++) {
-        let td = tr[i].getElementsByTagName("td")[6];
-        if (td) {
-            let textValue = td.textContent;
-            if (textValue.toUpperCase().indexOf(scarbReviewList) > -1) {
-                tr[i].style.display = "";
-            }
-            else {
-                tr[i].style.display = "none";
             }
         }
     }
-}
 
-
-// =============================== CONTRACT TERM FILTER ===============================
-// =============================== CONTRACT TERM FILTER ===============================
-
-
-function contractTermFilter() {
-    let all_Contract_Term = document.getElementById("Contract_Term_list").value.toUpperCase();
-    let tableData = document.getElementById("tableData");
-    let tr = tableData.getElementsByTagName("tr")
-
-    for (i = 0; i < tr.length; i++) {
-        let td = tr[i].getElementsByTagName("td")[5];
-        if (td) {
-            let textValue = td.textContent;
-            if (textValue.toUpperCase().indexOf(all_Contract_Term) > -1) {
-                tr[i].style.display = "";
-            }
-            else {
-                tr[i].style.display = "none";
-            }
-        }
+    else {
+        htmlSnippet(master.result)
     }
 }
+
 
 
 

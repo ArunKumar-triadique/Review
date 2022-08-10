@@ -10,7 +10,7 @@
     <!--===== CSS LINK =====-->
     <link rel="stylesheet" type="text/css" href="./CSS/Main.css">
 
-    <!--===== FONT AWESOME CDN LINK =====-->  
+    <!--===== FONT AWESOME CDN LINK =====-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,17 +25,18 @@
 
 <body>
 
-    <!--===== HEADER PART STARTS HERE (LOGO + WORK FLOW) =====-->
-    <div class="header">
 
-        <div class="logo">
+    <!--===== HEADER PART STARTS HERE (LOGO + WORK FLOW) =====-->
+    <div id="header">
+
+        <div id="brand">
             <img src="./Images/MedcomLogo.png">
         </div>
 
         <!--===== CONTRACT WORKFLOW =====-->
-        <div class="workflow">
+        <div class="contractWorkflow">
 
-            <div class="workflow-text">
+            <div class="contractWorkflowText">
                 <div><br>RA OFFICE</div>
                 <div>BO REQ <BR>VERIFICATION</div>
                 <div><br>QA/QA</div>
@@ -46,23 +47,24 @@
                 <div><br>RM</div>
             </div>
 
-            <div class=" workflow-icons">
-                <div><i style="font-size: 22px; border: 4px solid rgb(154, 189, 102); color: rgb(120, 163, 80); width: 30px; height: 30px; border-radius: 50%;"
-                        class="fa-solid fa-circle-user"></i></div>
-                <div><i style="font-size: 22px; border: 4px solid rgb(69, 118, 198); color: rgb(16, 43, 199); width: 30px; height: 30px; border-radius: 50%;"
-                        class="fa-solid fa-circle-user"></i></div>
-                <div><i style="font-size: 22px; border: 4px solid rgb(165, 89, 180); color: rgb(166, 5, 177); width: 30px; height: 30px; border-radius: 50%;"
-                        class="fa-solid fa-circle-user"></i></div>
-                <div><i style="font-size: 22px; border: 4px solid rgb(155, 221, 112); color: rgb(54, 232, 27); width: 30px; height: 30px; border-radius: 50%;"
-                        class="fa-solid fa-circle-user"></i></div>
-                <div><i style="font-size: 22px; border: 4px solid rgb(224, 152, 96); color: rgb(241, 120, 13); width: 30px; height: 30px; border-radius: 50%;"
-                        class="fa-solid fa-circle-user"></i></div>
-                <div><i style="font-size: 22px; border: 4px solid rgb(241, 123, 115); color: rgb(225, 21, 21); width: 30px; height: 30px; border-radius: 50%;"
-                        class="fa-solid fa-circle-user"></i></div>
-                <div><i style="font-size: 22px; border: 4px solid rgb(79, 218, 246); color: rgb(32, 165, 205); width: 30px; height: 30px; border-radius: 50%;"
-                        class="fa-solid fa-circle-user"></i></div>
-                <div><i style="font-size: 22px; border: 4px solid rgb(59, 128, 137); color: rgb(25, 90, 126); width: 30px; height: 30px; border-radius: 50%;"
-                        class="fa-solid fa-circle-user"></i></div>
+            <div class="contractWorkflowIcons">
+
+                <div><i class="raOffice fa-solid fa-circle-user"></i></div>
+                    
+                <div><i class="boReqVerification fa-solid fa-circle-user"></i></div>
+                        
+                <div><i class="qaQc fa-solid fa-circle-user"></i></div>
+                        
+                <div><i  class="allDirectorates fa-solid fa-circle-user"></i></div>
+                       
+                <div><i  class="scarbReview fa-solid fa-circle-user"></i></div>
+                       
+                <div><i class="deputyChiefOfStaff fa-solid fa-circle-user"></i></div>
+                        
+                <div><i class="chiefOfStaff fa-solid fa-circle-user"></i></div>
+                        
+                <div><i  class="rm fa-solid fa-circle-user"></i></div>
+                       
             </div>
 
             <!--===== DOTTED LINE TO CONNECT ICONS =====-->
@@ -74,78 +76,80 @@
 
 
     <!--===== NAV BAR STARTS HERE =====-->
-    <div class="navbar">
+    <nav class="navbar">
 
-        <div class="navbar-content">
+        <div class="navbarContainer">
 
-            <a href="#" class="navbar-content-home">
-                <span class="fa fa-home" ></span>
+            <a href="#" class="navbarHome">
+                <span class="fa fa-home"></span>
                 <span class="medcom">MEDCOM</span>
             </a>
 
-            <a href="#" class="navbar-content-create">
+            <a href="#" class="navbarCreate">
                 <span class="fa-solid fa-circle-plus"></span>
                 <span class="create">CREATE</span>
                 <span class="fa-solid fa-caret-down" class="meddrop"></span>
             </a>
 
-            <a href="#" class="navbar-content-scarb">
-                    <span class="fa-solid fa-calendar-days"></span>
-                    <span class="scarbMonthlyReview">SCARB MONTHLY REVIEW SCHEDULE & METRICS</span>
-                    <span class="fa-solid fa-caret-down"></span>
-                </a>
+            <a href="#" class="navbarScarbreview">
+                <span class="fa-solid fa-calendar-days"></span>
+                <span class="scarbMonthlyReview">SCARB MONTHLY REVIEW SCHEDULE & METRICS</span>
+                <span class="fa-solid fa-caret-down"></span>
+            </a>
 
-            <a href="#" class="navbar-content-reports">
-                    <span class="fa-solid fa-file-lines"></span>
-                    <span class="reports">REPORTS</span>
-                </a>
+            <a href="#" class="navbarReports">
+                <span class="fa-solid fa-file-lines"></span>
+                <span class="reports">REPORTS</span>
+            </a>
 
-            <a href="#" class="navbar-content-helpdesk">
+            <a href="#" class="navbarHelpdesk">
                 <span class="fa-solid fa-phone"></span>
                 <span class="helpDesk">HELP DESK</span>
                 <span class="fa-solid fa-caret-down"></span>
             </a>
 
-            <!-- <a href="#" class="navbar-content-settings">
+            <!-- <a href="#" class="navbarSettings">
                     <span class="fa-solid fa-gear"></span>
                     SETTINGS
                 </a> -->
         </div>
-    </div>
+    </nav>
 
     <!--===== NOTIFICATION BAR + TABLE DATA + BOTTOM NAV BAR +  FILTER =====-->
-    <div class="body">
+    <div id="body">
 
-    <!--===== NOTIFICATION BAR + TABLE DATA =====-->
-        <div class="total-table">
+        <!--===== NOTIFICATION BAR + TABLE DATA =====-->
+        <div class="tableContainer">
 
-    <!--===== NOTIFICATION BAR STARTS =====-->
+            <!--===== NOTIFICATION BAR STARTS =====-->
             <div class="notification">
-
-                <div class="notification-left">
-                    <p class="notification-left-p1">IN REVIEW REQUESTS</p>
-                    <p class="notification-left-p2">5</p>
-                </div>
-
+                <p class="notificationInreview">IN REVIEW REQUESTS</p>
+                <p class="notificationsCount">5</p>
             </div>
 
-    <!--===== TABLE DATA STARTS HERE =====-->
-            <div class="table-content">
+            <!--===== TABLE DATA STARTS HERE =====-->
+            <div class="tableView">
                 <table id="tableData">
-                    <tr>
-                        <th></th>
-                        <th>SCA NUMBER</th>
-                        <th>CONTRACT DURATION</th>
-                        <th>TOTAL PROJECT COST</th>
-                        <th>REQUESTED COST</th>
-                        <th>CONTRACT TERM</th>
-                        <th>SCARB REVIEW</th>
-                        <th>STATUS</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>SCA NUMBER</th>
+                            <th>CONTRACT DURATION</th>
+                            <th>TOTAL PROJECT COST</th>
+                            <th>REQUESTED COST</th>
+                            <th>CONTRACT TERM</th>
+                            <th>SCARB REVIEW</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+
+                    </tbody>
                 </table>
             </div>
 
-    <!--===== BOTTOM NAV BAR =====-->
+            <!--===== BOTTOM NAV BAR =====-->
             <div class="bottom-navbar">
 
                 <div class="newsupdate"> <span class="fa-solid fa-newspaper" class="news"></span>
@@ -153,10 +157,10 @@
                 <div class="calendar"> <span class="fa-solid fa-calendar-check"></span> CALENDAR</div>
 
                 <div class="templates">
-                    <div class="templates-left">
+                    <div class="templates-text">
                         <span class="fa-solid fa-copy"></span> TEMPLATES
                     </div>
-                    <div class="templates-right">
+                    <div class="templates-dropdownIcon">
                         <span class="fa-solid fa-angle-down"></span>
                     </div>
                 </div>
@@ -165,7 +169,7 @@
 
         </div>
 
-    <!--===== FILTER STARTS HERE =====-->
+        <!--===== FILTER STARTS HERE =====-->
         <div class="filteration">
 
             <div class="dashboard">
@@ -202,19 +206,19 @@
 
                     <div>
                         <select name="" id="Primary_Staff_list" onchange="primaryStaffFilter()">
-                            <option value="all" class="all_Primary_Staff">ALL</option>
+                            <option value="all_Primary_Staff" class="all_Primary_Staff">ALL</option>
                         </select>
                     </div>
 
                     <div>
                         <select name="" id="directorates2_list" onchange="scaDirectoratesFilter()">
-                            <option value="all" class="all_directorates2">ALL</option>
+                            <option value="all_directorates2" class="all_directorates2">ALL</option>
                         </select>
                     </div>
 
                     <div>
-                        <select name="" id="fiscalYear">
-                            <option value="" class="fiscalYearList" onchange="fiscalYearFilter()">ALL</option>
+                        <select name="" id="fiscalYear" onchange="fiscalYearFilter()">
+                            <option value="fiscalYearList" class="fiscalYearList" >ALL</option>
                         </select>
                     </div>
 
@@ -229,33 +233,35 @@
                 <p class="scarb-review-title">Scrab Review</p>
 
                 <select name="" id="scarb_review_month" onchange="scarbReviewFilter()">
-                    <option value="" class="scarbReviewList"></option>
+                    <option value="scarbReviewList" class="scarbReviewList">ALL</option>
                 </select>
             </div>
 
             <div class="contract-term">
                 <p class="contract-term-title">Contract Term</p>
+                
                 <select name="" id="Contract_Term_list" onchange="contractTermFilter()">
-                    <option value="" class="all_Contract_Term"></option>
+                    <option value="all_Contract_Term" class="all_Contract_Term">ALL</option>
                 </select>
             </div>
+            
             </section>
 
             <div class="total-cost">
                 $21,512,358,498.00
             </div>
 
-    <!--===== CHEVRON WORK PROCESS IMAGE =====-->
+            <!--===== CHEVRON WORK PROCESS IMAGE =====-->
             <div class="chevron">
-                <img src="./Images/chevron wheel.jpg" alt="svg" height="250px" />
+                <img src="./Images/Chevron_Wheel2.png" alt="svg" height="250px" />
             </div>
 
         </div>
 
-    <!--===== BODY ENDS HERE  =====-->
+        <!--===== BODY ENDS HERE  =====-->
     </div>
 
-    <!-- FOOTER STARTS HERE -->
+    <!-- ===== FOOTER STARTS HERE ===== -->
     <footer>
         <hr>
         <p class="footer-title">&copy; 2017, USA Medcom Acquisition Process</p>
@@ -264,6 +270,8 @@
 
     <!--===== JAVA SCRIPT LINK =====-->
     <script src="./JS/Main.js"></script>
+    <script src="./config/hardcode.js"></script>
+
 
 </body>
 
