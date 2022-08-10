@@ -5,9 +5,7 @@
 .container {
     margin: 0 6px 0 6px;
     width: 30%;
-    background-color: aqua;
-    
-}
+    }
 
 .fiscalyear {
     display: grid;
