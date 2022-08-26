@@ -10,7 +10,7 @@ font-size: 13px;
 .main_child{
     padding: 5px;
 }
-button{
+.ab button{
     height: 80%;
     
 }
@@ -54,6 +54,7 @@ button{
     display: grid;
     grid-template-columns: auto auto;
     background: -webkit-linear-gradient( 0deg, rgb(153,153,51) 0%, rgb(15,126,183) 100%)
+
 }
 ol{
     list-style: none;

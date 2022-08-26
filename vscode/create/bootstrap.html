@@ -1,0 +1,557 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css_files/styleform.css">
+    <script src="./js_file/New_Contract.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="main_box">
+            <div class="head">
+                <h1>Request for Services contract Approval Form</h1>
+                <div id="buttons" class="">
+                    <button class="ab">CLOSE</button>
+                    <button>VALIDATE</button>
+                    <button>SAVE</button>
+                    <button>SUBMIT</button>
+                </div>
+            </div>
+            <div id="content">
+                <p>FAR 7.502 Applicicablity defines a "Service Contract"as,a contract executed for task to be
+                    performed,rather
+                    than
+                    supplies to be delivered.included in that definition are the following items:</p>
+                <ul>
+                    <li>Repairs,maintenance,construction, and demolition projects that utilize Operations and
+                        Maintenance
+                        funding
+                    </li>
+                    <li>Customized Software Development</li>
+                    <li>Software Maintenance</li>
+                    <li>Software Upgrades</li>
+                    <li>Extended maintenance warranties/repair beyond the standared manufacturer's warranty</li>
+                </ul>
+            </div>
+            <div id="statement">
+                <b>Does Your intended acquisation fall into one of the aformenentioned items ? <span
+                        class="star">*</span> <span>&#9432;</span></b>
+
+
+                <div id="radio" required>
+                    <input type="radio" id="yes" name="check" onchange="Displayform()">Yes
+                    <input type="radio" id="no" name="check" onchange="Displayform()">No
+                </div>
+            </div>
+            <hr id="linehr">
+        </div>
+
+        <!-- ************ -->
+
+        <div class="form_div">
+            <div id="createform">
+
+                <div id="field1">
+                    <p>1.What month would you like this SCA action to be presented to the Service Contract Approval
+                        Review Board(SCARB)?</p>
+                    <div class="options">
+                        <select class="month" id="months">
+                            <option>Select</option>
+                            <option>JAN</option>
+                            <option>FEB</option>
+                            <option>MAR</option>
+                            <option>APR</option>
+                            <option>MAY</option>
+                            <option>JUN</option>
+                            <option>JULY</option>
+                            <option>AUG</option>
+                            <option>SEP</option>
+                            <option>OCT</option>
+                            <option>NOV</option>
+                            <option>DEC</option>
+                            <option>N/A</option>
+                        </select>
+                        <select class="year" id="years">
+                            <option>Select</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                        </select>
+                    </div>
+                </div><br>
+                <div id="field2">
+                    <p> 2.Who is the Contracting Officer Respresentative (COR) for this SCA action?</p>
+                    <div class="details">
+                        <div>
+                            <p> COR EMAIL:</p>
+                            <div>
+                                <input type="email" id="email" name="email" placeholder="abc@mail.com">
+                            </div>
+                        </div>
+                        <div>
+                            <p>COR TELEPHONE:</p>
+                            <div>
+                                <input type="tel" id="phone" name="phone" placeholder="123456789">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="field3">
+                    <p>3.is the COR currently certified?<span class="star">*</span></p>
+                    <div>
+                        <select class="cor" id="field3val" onchange="field3()" required>
+                            <option>Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field4">
+                    <p>4.Does the COR currently have access to ekectronic Contractor Manpower Reporting Application
+                        (eCMRA)
+                        system?<span class="star">*</span></p>
+                    <div>
+                        <select class="ecmra" required>
+                            <option>Select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                            <option>N/A</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field5">
+                    <p>5.Will this SCA action utilize a Contractor Manpower Reporting Application(eCMRA)
+                        system?<span class="star">*</span></p>
+                    <div>
+                        <select class="sca" id="field5opt" onchange="changevalue()" required>
+                            <option>Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field5_details">
+                    <div>
+                        <p>COR EMAIL:<span class="star">*</span></p>
+                        <div>
+                            <input type="email" id="mail" name="email" placeholder="abc@mail.com" required>
+                        </div>
+                    </div>
+                    <div>
+                        <p>COR TELEPHONE:<span class="star">*</span></p>
+                        <div>
+                            <input type="tel" id="telephone" name="phone" placeholder="123456789" required>
+                        </div>
+                    </div>
+                </div>
+                <div id="field6">
+                    <p>6.Does this requirement support the operation of the MEDCOM HQ's OneStaff (MCHQ) or does it
+                        support
+                        the enterprise (Corporate)?<span class="star">*</span></p>
+                    <div>
+                        <select class="corporate" required>
+                            <option>Select</option>
+                            <option>MCHQ</option>
+                            <option>CORPORATE</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field7">
+                    <p>7.What Budget Activity Group (BAG) will this contract be funded with?<span
+                            class="star">*</span>
+                    </p>
+                    <div>
+                        <select class="Budget" required>
+                            <option>Select</option>
+                            <option>101</option>
+                            <option>102</option>
+                            <option>103</option>
+                            <option>104</option>
+                            <option>105</option>
+                            <option>106</option>
+                            <option>107</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field8">
+                    <p>8.What is the contract type for this SCA action?<span class="star">*</span></p>
+                    <div>
+                        <select class="contract" required>
+                            <option>Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field9">
+                    <p>9.What is the contract category of this SCA action?<span class="star">*</span>
+                    </p>
+                    <div>
+                        <select class="contract_category" required>
+                            <option>Select</option>
+                            <option>IT Contract</option>
+                            <option>Maintenance Contract</option>
+                            <option>Support Service Contract</option>
+                            <option>Sample/Sample Analysis Contract</option>
+                            <option>Contract Others</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field10">
+                    <p>
+                        10.What is the Portfolio Category for this requirement?<span class="star">*</span>
+                    </p>
+                    <div>
+                        <input type="text" class="Portfolio" placeholder="Portfolio Category">
+                    </div>
+                </div>
+                <div id="field11">
+                    <p>
+                        11.What is the Product Service Code (PSC) for this requirement?<span class="star">*</span>
+                    </p>
+                    <div>
+                        <input type="text" placeholder="Product Service Code">
+                    </div>
+                </div>
+                <div id="field12">
+                    <p>
+                        12.What is the North American Industry Classification System (NAICS) for this
+                        requirement?<span class="star">*</span>
+                    </p>
+                    <div>
+                        <input type="text" placeholder="NAICS">
+                    </div>
+                </div>
+                <div id="field13">
+                    <p>13.Will this requirement utilize a Sole Source Selection? <span class="star">*</span></p>
+                    <div>
+                        <select id="field13_opt" onchange="changefield()" required>
+                            <option>Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field14">
+                    <p>Is the Sole Source less than $250K? <span class="star">*</span></p>
+                    <div>
+                        <select class="sourceless" required>
+                            <option>Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field15">
+                    <p>
+                        Which contract source will this requirement utilize?
+                    </p>
+                    <div>
+                        <select>
+                            <option>Select</option>
+                            <option>Non-MEDCOM</option>
+                            <option>DOD</option>
+                            <option>Non-DOD</option>
+                            <option>MEDCOM/OTSG</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field16">
+                    <p>16.Will this SCA action utilize one or more of the following: <span class="star">*</span></p>
+                    <div>
+                        <select id="field16_opt" onchange="checkonchange()" required>
+                            <option>Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="checkbox">
+                    <ol id="chklist">
+                        <li> <input type="checkbox" id="chkkbox" disabled="disabled"><label>Support Personnel
+                                engaged in IM/IT
+                                work;</label></li>
+                        <li> <input type="checkbox" id="chkkbox1" disabled="disabled"><label>Software Application or
+                                Maintenance;</label></li>
+                        <li> <input type="checkbox" id="chkkbox2" disabled="disabled"><label>IM/IT Hardware;</label>
+                        </li>
+                        <li><input type="checkbox" id="chkkbox3" disabled="disabled"><label>Others</label></li>
+                    </ol>
+                </div>
+                <div id="field17">
+                    <p>
+                        17. What is the intended appropriation that wil fund this SCA action? *
+                    </p>
+                    <div>
+                        <select class="scaaction">
+                            <option>Select</option>
+                            <option>DHP</option>
+                            <option>DHP RDT&E</option>
+                            <option>DHP Procurement</option>
+                            <option>DOD</option>
+                            <option>OMA-Army</option>
+                            <option>OPA-Army</option>
+                            <option>RDT&E-Army</option>
+                            <option>OTHER</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field18">
+                    <p>
+                        18.Will this SCA action utilize any special funding source? *
+
+                    </p>
+                    <div>
+                        <select class="scasource">
+                            <option>Select</option>
+                            <option>AMAP</option>
+                            <option>BHSL</option>
+                            <option>CNP</option>
+                            <option>IDES</option>
+                            <option>N/A</option>
+                            <option>OTHER</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="field19">
+                    <p> 19.Which Contracting office is processing this SCA Action?</p>
+                    <div class="details19">
+                        <div>
+                            <lable>Contracting Command</lable>
+                            <select id="Contractingcommand" onchange="field19_opp()">
+                                <option value="S">Select</option>
+                                <option value="0">Army Contracting Command (ACC)</option>
+                                <option value="1">Expeditionary Contracting Command (ECC)</option>
+                                <option value="2">Mission Installation Contracting Command (MICC)</option>
+                                <option value="3">US Army Corps of Engineers</option>
+                                <option value="4">US Army Health Contracting Activity</option>
+                                <option value="5">US Army Medical Research Acquisition Activity</option>
+                                <option value="6" selected="selected">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <lable>Contracting Office</lable>
+                            <div>
+                                <select class="Contracting_command">
+                                    <div id="Co_S">
+                                        <option>Select</option>
+                                    </div>
+
+                                    <div id="Co_0">
+                                        <option>Select</option>
+                                        <option>Army Contracting Command - Aberdeen Proving Ground (ACC-APG)
+                                        </option>
+                                        <option>Army Contracting Command - Adelphi, MD</option>
+                                        <option>Army Contracting Command - Denver, CO</option>
+                                        <option>Army Contracting Command - Ft. Belvoir, VA</option>
+                                        <option>Army Contracting Command - Ft. Huachuca, AZ</option>
+                                        <option>Army Contracting Command - Frederick, MD</option>
+                                        <option>Army Contracting Command - Natick, MA</option>
+                                        <option>Army Contracting Command - Orlando, FL</option>
+                                        <option>Army Contracting Command - Research Triangle Park, NC</option>
+                                        <option>Army Contracting Command - Tobyhanna Army Depot, PA</option>
+                                    </div>
+                                    <div id="Co_1">
+                                        <option>Select</option>
+                                        <option>ECC -Regional Contracting Office Alaska</option>
+                                        <option>ECC -Regional Contracting Office Hawaii</option>
+                                    </div>
+                                    <div id="Co_2">
+                                        <option>Select</option>
+                                        <option>MICC-Fort Buchanan, Puerto Rico</option>
+                                        <option>MICC-Fort Jackson, South Carolina</option>
+                                        <option>MICC-Fort McCoy, Wisconsin</option>
+                                        <option>MICC-JBSA Fort Sam Houston</option>
+                                        <option>MICC-Fort Knox, Kentucky</option>
+                                        <option>MICC-Fort Bliss, Texas</option>
+                                        <option>MICC-Fort Carson, Colorado</option>
+                                        <option>MICC-Dugway Proving Ground, Utah</option>
+                                        <option>MICC-Fort Irwin, California</option>
+                                        <option>MICC-Fort Hood, Texas</option>
+                                        <option>MICC-Joint Base Lewis-McChord, Washington</option>
+                                        <option>MICC-Fort Riley, Kansas</option>
+                                        <option>MICC-White Sands Missile Range, New Mexico</option>
+                                        <option>MICC-Yuma Proving Ground, Arizona</option>
+                                        <option>MICC-Fort Campbell, Kentucky</option>
+                                        <option>MICC-Fort Polk, Louisiana</option>
+                                        <option>MICC-Fort Bragg, North Carolina</option>
+                                        <option>MICC-Fort Drum, New York</option>
+                                        <option>MICC-Fort Stewart, Georgia</option>
+                                        <option>MICC-Fort Belvoir, Virginia</option>
+                                        <option>FDO-Fort Eustis, Joint Base Langley-Eustis, Virginia</option>
+                                        <option>MICC-Carlisle Barracks, Pennsylvania</option>
+                                        <option>MICC-Fort Benning, Georgia</option>
+                                        <option>MICC-Fort Eustis, Joint Base Langley-Eustis, Virginia</option>
+                                        <option>MICC-Fort Gordon, Georgia</option>
+                                        <option>MICC-Fort Leavenworth, Kansas</option>
+                                        <option>MICC-Fort Lee, Virginia</option>
+                                        <option>MICC-Fort Leonard Wood, Missouri</option>
+                                        <option>MICC-Fort Rucker, Alabama</option>
+                                        <option>MICC-Fort Sill, Oklahoma</option>
+                                        <option>MICC-Presidio of Monterey, California</option>
+                                        <option>MICC-West Point, New York</option>
+                                        <option>Regional Health Contracting Office - Atlantic (Provisional) - RHCO-A
+                                            (P)</option>
+                                        <option>Western Region Contracting Office</option>
+                                        <option>Regional Health Contracting Office - Central (Provisional) - RHCO-C
+                                            (P)</option>
+                                        <option>Regional Health Contracting Office - Europe (Provisional) -
+                                            RHCO-E(P)</option>
+                                        <option>Regional Health Contracting Office - Pacific (Provisional) -
+                                            RHCO-P(P)</option>
+                                    </div>
+                                    <div id="Co_3">
+                                        <option value="Select">Select</option>
+                                        <option value="US Army Corps of Engineers – Buffalo District">US Army Corps
+                                            of Engineers – Buffalo District</option>
+                                        <option value="US Army Corps of Engineers – Chicago District">US Army Corps
+                                            of Engineers – Chicago District</option>
+                                        <option value="US Army Corps of Engineers – Detroit District">US Army Corps
+                                            of Engineers – Detroit District</option>
+                                        <option value="US Army Corps of Engineers – Huntington District">US Army
+                                            Corps of Engineers – Huntington District</option>
+                                        <option value="US Army Corps of Engineers – Louisville District">US Army
+                                            Corps of Engineers – Louisville District</option>
+                                        <option value="US Army Corps of Engineers – Nashville District">US Army
+                                            Corps of Engineers – Nashville District</option>
+                                        <option value="US Army Corps of Engineers – Pittsburgh District">US Army
+                                            Corps of Engineers – Pittsburgh District</option>
+                                        <option value="US Army Corps of Engineers – Memphis District">US Army Corps
+                                            of Engineers – Memphis District</option>
+                                        <option value="US Army Corps of Engineers – New Orleans District">US Army
+                                            Corps of Engineers – New Orleans District</option>
+                                        <option value="US Army Corps of Engineers – Rock Island District">US Army
+                                            Corps of Engineers – Rock Island District</option>
+                                        <option value="US Army Corps of Engineers – St. Louis District">US Army
+                                            Corps of Engineers – St. Louis District</option>
+                                        <option value="US Army Corps of Engineers – St. Paul District">US Army Corps
+                                            of Engineers – St. Paul District</option>
+                                        <option value="US Army Corps of Engineers – Vicksburg District">US Army
+                                            Corps of Engineers – Vicksburg District</option>
+                                        <option value="US Army Corps of Engineers – Baltimore District">US Army
+                                            Corps of Engineers – Baltimore District</option>
+                                        <option value="US Army Corps of Engineers – Europe District">US Army Corps
+                                            of Engineers – Europe District</option>
+                                        <option value="US Army Corps of Engineers – New England District">US Army
+                                            Corps of Engineers – New England District</option>
+                                        <option value="US Army Corps of Engineers – New York District">US Army Corps
+                                            of Engineers – New York District</option>
+                                        <option value="US Army Corps of Engineers – Norfolk District">US Army Corps
+                                            of Engineers – Norfolk District</option>
+                                        <option value="US Army Corps of Engineers – Philadelphia District">US Army
+                                            Corps of Engineers – Philadelphia District</option>
+                                        <option value="US Army Corps of Engineers – Kansas City District;">US Army
+                                            Corps of Engineers – Kansas City District;</option>
+                                        <option value="US Army Corps of Engineers – Omaha District">US Army Corps of
+                                            Engineers – Omaha District</option>
+                                        <option value="US Army Corps of Engineers – Portland District">US Army Corps
+                                            of Engineers – Portland District</option>
+                                        <option value="US Army Corps of Engineers – Seattle District">US Army Corps
+                                            of Engineers – Seattle District</option>
+                                        <option value="US Army Corps of Engineers – Walla Walla District">US Army
+                                            Corps of Engineers – Walla Walla District</option>
+                                        <option value="US Army Corps of Engineers – Alaska District">US Army Corps
+                                            of Engineers – Alaska District</option>
+                                        <option value="US Army Corps of Engineers – Far East District">US Army Corps
+                                            of Engineers – Far East District</option>
+                                        <option value="US Army Corps of Engineers – Honolulu District">US Army Corps
+                                            of Engineers – Honolulu District</option>
+                                        <option value="US Army Corps of Engineers – Japan Engineer District">US Army
+                                            Corps of Engineers – Japan Engineer District</option>
+                                        <option value="US Army Corps of Engineers – Charleston District">US Army
+                                            Corps of Engineers – Charleston District</option>
+                                        <option value="US Army Corps of Engineers – Jacksonville District">US Army
+                                            Corps of Engineers – Jacksonville District</option>
+                                        <option value="US Army Corps of Engineers – Mobile District">US Army Corps
+                                            of Engineers – Mobile District</option>
+                                        <option value="US Army Corps of Engineers – Savannah District">US Army Corps
+                                            of Engineers – Savannah District</option>
+                                        <option value="US Army Corps of Engineers – Wilmington District">US Army
+                                            Corps of Engineers – Wilmington District</option>
+                                        <option value="US Army Corps of Engineers – Albuquerque District">US Army
+                                            Corps of Engineers – Albuquerque District</option>
+                                        <option value="US Army Corps of Engineers – Los Angeles District">US Army
+                                            Corps of Engineers – Los Angeles District</option>
+                                        <option value="US Army Corps of Engineers – Sacramento District">US Army
+                                            Corps of Engineers – Sacramento District</option>
+                                        <option value="US Army Corps of Engineers – San Francisco District">US Army
+                                            Corps of Engineers – San Francisco District</option>
+                                        <option value="US Army Corps of Engineers – Southwestern Division">US Army
+                                            Corps of Engineers – Southwestern Division</option>
+                                        <option value="US Army Corps of Engineers – Fort Worth District">US Army
+                                            Corps of Engineers – Fort Worth District</option>
+                                        <option value="US Army Corps of Engineers – Galveston District">US Army
+                                            Corps of Engineers – Galveston District</option>
+                                        <option value="US Army Corps of Engineers – Little Rock District">US Army
+                                            Corps of Engineers – Little Rock District</option>
+                                        <option value="US Army Corps of Engineers – Tulsa District">US Army Corps of
+                                            Engineers – Tulsa District</option>
+                                        <option value="US Army Corps of Engineers – Middle East District">US Army
+                                            Corps of Engineers – Middle East District</option>
+                                        <option
+                                            value="US Army Corps of Engineers – Transatlantic Afghanistan District">
+                                            US Army Corps of Engineers – Transatlantic Afghanistan District</option>
+                                        <option value="Army Corps of Engineers - Geospatial Center">Army Corps of
+                                            Engineers - Geospatial Center</option>
+                                        <option
+                                            value="Army Corps of Engineers - Engineer Research &amp; Development Center">
+                                            Army Corps of Engineers - Engineer Research &amp; Development Center
+                                        </option>
+                                        <option
+                                            value="Army Corps of Engineers - Engineering &amp; Support Center, Huntsville">
+                                            Army Corps of Engineers - Engineering &amp; Support Center, Huntsville
+                                        </option>
+                                        <option value="Army Corps of Engineers - Finance Centers">Army Corps of
+                                            Engineers - Finance Centers</option>
+                                        <option
+                                            value="Army Corps of Engineers - Humphreys Engineer Center Support Activity">
+                                            Army Corps of Engineers - Humphreys Engineer Center Support Activity
+                                        </option>
+                                        <option value="Army Corps of Engineers - Institute of Water Resources">Army
+                                            Corps of Engineers - Institute of Water Resources</option>
+                                        <option value="Army Corps of Engineers - Logistics Activity">Army Corps of
+                                            Engineers - Logistics Activity</option>
+                                        <div id="Co_4">
+                                            <option value="Select">Select</option>
+                                            <option
+                                                value="US Army Health Contracting Activity (Provisional) - USAHCA(P)">
+                                                US
+                                                Army Health Contracting Activity (Provisional) - USAHCA(P)</option>
+                                            <option value="HRCO">HRCO</option>
+                                            <option value="RHCO-A">RHCO-A</option>
+                                            <option value="RHCO-P">RHCO-P</option>
+                                            <option value="RHCO-C">RHCO-C</option>
+                                            <option value="RHCO-E">RHCO-E</option>
+                                        </div>
+                                        <div id="Co_5">
+                                            <option>Select</option>
+                                            <option>US Army Medical Research Acquisition Activity (USAMRAA)</option>
+                                        </div>
+                                </select>
+                            </div>
+
+
+                            </select>
+                            <div id="Co_6">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *********************** -->
+
+    <!-- <div class="container"></div> -->
+    
+</body>
+</html>

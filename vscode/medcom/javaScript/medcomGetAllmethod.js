@@ -34,6 +34,7 @@
   
         let tabledata = document.querySelector("tr")
         data.forEach(element => {
+          var months=["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sept","Oct","Nov","Dec"]
           var date= new Date(element.POP_End_Date)
           var op1 = new Date(element.Option_Year_1_End_Date)
           var op2 =new Date(element.Option_Year_2_End_Date)
@@ -52,13 +53,14 @@
               }else if(op3>op4){
                   lastdate= op3
               }
+              
               else if(op4>op5){
                   lastdate= op4
               }
               else{
                   lastdate= op5
               }
-              var months=["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sept","Oct","Nov","Dec"]
+             
               
           if (element && element.Title&& element.SCARB_Review_Month) {
             value = `${value ? value : ''}

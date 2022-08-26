@@ -14,7 +14,7 @@
       let db1 = event.target.result  
        masterdata.forEach(element => {
          element.createdAt = new Date();
-         element.updatedAt = new Date();
+        //  element.updatedAt = new Date();
           metalist(db1,element)
        });
     }

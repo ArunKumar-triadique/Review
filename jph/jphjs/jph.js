@@ -2,9 +2,11 @@ let p = document.getElementById("data")
 function generateRandomColor() {
   var letters = '0123456789ABCDEF';
   var color = '#';
-  for (var i = 0; i < 6; i++) {
+  for (var i = 0; i < 6; i++) 
+  {
     color += letters[Math.round(Math.random() * 15)];
   }
+  // console.log(color)
   return color;
 }
 async function img() {
